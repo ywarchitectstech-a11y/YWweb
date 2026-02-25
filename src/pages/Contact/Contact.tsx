@@ -35,59 +35,64 @@ const Contact = () => {
         </div>
 
         <div className={styles.formSection}>
-          <img className={styles.ImageForm} src={project1} alt="" />
           <AnimatedSection>
-            <form className={styles.form} onSubmit={handleSubmit}>
-              <div className={styles.inputGroup}>
-                <input
-                  type="text"
-                  placeholder="Full Name*"
-                  className={styles.input}
-                  required
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
+            <div className={styles.formWrapper}>
+              <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.inputGroup}>
+                  <input
+                    type="text"
+                    placeholder="Full Name*"
+                    className={styles.input}
+                    required
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number*"
+                    className={styles.input}
+                    required
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input
+                    type="email"
+                    placeholder="Email ID*"
+                    className={styles.input}
+                    required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <textarea
+                    placeholder="Your Message"
+                    className={styles.textarea}
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                  />
+                </div>
+                <button type="submit" className={styles.submitBtn}>
+                  Submit
+                </button>{" "}
+              </form>
+
+              <div className={styles.imageWrapper}>
+                <img src={project1} alt="Contact" />
               </div>
-              <div className={styles.inputGroup}>
-                <input
-                  type="tel"
-                  placeholder="Phone Number*"
-                  className={styles.input}
-                  required
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                />
-              </div>
-              <div className={styles.inputGroup}>
-                <input
-                  type="email"
-                  placeholder="Email ID*"
-                  className={styles.input}
-                  required
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                />
-              </div>
-              <div className={styles.inputGroup}>
-                <textarea
-                  placeholder="Your Message"
-                  className={styles.textarea}
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                />
-              </div>
-              <button type="submit" className={styles.submitBtn}>
-                Submit
-              </button>
-            </form>
+            </div>
           </AnimatedSection>
         </div>
 

@@ -306,23 +306,23 @@ function ProjectCard({ project, index, onClick }) {
         <div className={styles.cardMeta}>
           <span className={styles.cardDiscipline}>{project.discipline}</span>
           <span className={styles.cardMetaDot} />
-          <span className={styles.cardLocation}>{project.location}</span>
-          <span className={styles.cardYear}>{project.year}</span>
+          {/* <span className={styles.cardLocation}>{project.location}</span> */}
+          {/* <span className={styles.cardYear}>{project.year}</span> */}
         </div>
 
         <h3 className={styles.cardTitle}>{project.title}</h3>
-        <p className={styles.cardDesc}>{project.shortDesc}</p>
-
+        {/* <p className={styles.cardDesc}>{project.shortDesc}</p> */}
+        {/* 
         <div className={styles.cardTags}>
           {project.tags.slice(0, 2).map((tag) => (
             <span key={tag} className={styles.tag}>
               {tag}
             </span>
           ))}
-          {project.tags.length > 2 && (
+          {/* {project.tags.length > 2 && (
             <span className={styles.tagMore}>+{project.tags.length - 2}</span>
-          )}
-        </div>
+          )} 
+        </div> */}
       </div>
     </article>
   );
@@ -497,7 +497,7 @@ function Project() {
               key={project.id}
               project={project}
               index={i}
-              onClick={(id) => navigate(`/project/${id}`)}
+              // onClick={(id) => navigate(`/project/${id}`)}
             />
           ))
         )}
@@ -557,9 +557,9 @@ function ProjectDetailPage() {
             <button
               className={styles.detailNavArrow}
               disabled={!prevProject}
-              onClick={() =>
-                prevProject && navigate(`/project/${prevProject.id}`)
-              }
+              // onClick={() =>
+              // prevProject && navigate(`/project/${prevProject.id}`)
+              // }
               aria-label="Previous project"
             >
               <IconArrowLeft />
@@ -567,9 +567,9 @@ function ProjectDetailPage() {
             <button
               className={styles.detailNavArrow}
               disabled={!nextProject}
-              onClick={() =>
-                nextProject && navigate(`/project/${nextProject.id}`)
-              }
+              // onClick={() =>
+              // nextProject && navigate(`/project/${nextProject.id}`)
+              // }
               aria-label="Next project"
             >
               <IconArrowRight />
@@ -677,12 +677,12 @@ function ProjectDetailPage() {
                 <article
                   key={p.id}
                   className={styles.relatedCard}
-                  onClick={() => navigate(`/project/${p.id}`)}
+                  // onClick={() => navigate(`/project/${p.id}`)}
                   role="button"
                   tabIndex={0}
-                  onKeyDown={(e) =>
-                    e.key === "Enter" && navigate(`/project/${p.id}`)
-                  }
+                  // onKeyDown={(e) =>
+                  //   e.key === "Enter" && navigate(`/project/${p.id}`)
+                  // }
                 >
                   <div className={styles.relatedImgWrap}>
                     <img
@@ -710,7 +710,7 @@ function ProjectDetailPage() {
           {prevProject && (
             <button
               className={styles.navProject}
-              onClick={() => navigate(`/project/${prevProject.id}`)}
+              // onClick={() => navigate(`/project/${prevProject.id}`)}
             >
               <span className={styles.navProjectDir}>
                 <IconArrowLeft /> Previous
@@ -723,7 +723,7 @@ function ProjectDetailPage() {
           {nextProject && (
             <button
               className={`${styles.navProject} ${styles.navProjectNext}`}
-              onClick={() => navigate(`/project/${nextProject.id}`)}
+              // onClick={() => navigate(`/project/${nextProject.id}`)}
             >
               <span className={styles.navProjectDir}>
                 Next <IconArrowRight />

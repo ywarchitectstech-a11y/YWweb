@@ -95,7 +95,7 @@ const Landing = () => {
         keywords="architects, architecture, urban planning, interior design, landscape architecture, YW Architects, Pune"
       />
 
-      <main>
+      <main className={styles.mainPage}>
         {/* Hero */}
         <section className={styles.hero}>
           <div className={styles.heroImage}>

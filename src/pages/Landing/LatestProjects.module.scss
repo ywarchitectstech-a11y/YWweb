@@ -1,3 +1,5 @@
+@use "../../styles/variables.module" as *;
+
 // ─── Projects Carousel — Snøhetta exact technique ────────────────────────────
 //
 // Key insight from source:
@@ -9,23 +11,24 @@
 
 .section {
   width: 100%;
-  // background: #212121;
   padding: 40px 0 0;
   -webkit-user-select: none;
   user-select: none;
+  @include responsive($tablet) {
+    max-width: 100vw;
+    overflow: hidden;
+  }
 }
 
 // ── The stage: relative container that holds all absolute cards ───────────────
 .stage {
   position: relative;
   width: 100%;
-  // Height = aspect ratio of center card: center card width = 36vw, aspect = 3:2
-  // So height = 36vw * (2/3) = 24vw
   height: 24vw;
   cursor: grab;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
-  overflow: visible; // let edge cards peek outside if needed, clip on section
+  overflow: visible;
 
   &:active {
     cursor: grabbing;
@@ -34,8 +37,11 @@
   @media (max-width: 1024px) {
     height: 28vw;
   }
+
+  // ── MOBILE ONLY CHANGE ──
+  // center card = 70vw wide, aspect 3:2 → height = 70vw × 0.6667 = 46.7vw
   @media (max-width: 768px) {
-    height: 36vw;
+    height: 47vw;
   }
 }
 
@@ -43,22 +49,18 @@
 .card {
   position: absolute;
   top: 0;
-  // left and width are set dynamically by GSAP — defaults below are overridden
   left: 32%;
   width: 36%;
   will-change: left, width, opacity;
-  // NO transition — GSAP owns all motion
-
-  // Prevent cards from overflowing section
   overflow: hidden;
 }
 
-// ── Aspect ratio container (Snohetta exact: h-0 + padding-bottom) ─────────────
+// ── Aspect ratio container ─────────────────────────────────────────────────────
 .cardInner {
   width: 100%;
   height: 0;
   position: relative;
-  padding-bottom: 66.6667%; // 2:3 aspect ratio — same as source
+  padding-bottom: 66.6667%;
 
   img {
     position: absolute;
@@ -73,22 +75,22 @@
   }
 }
 
-// ── Caption layer — CSS grid stack, all overlap ───────────────────────────────
-// Exactly matches Snohetta: col-start-1 row-start-1 on all, active gets opacity-100
+// ── Caption layer ─────────────────────────────────────────────────────────────
 .captionWrap {
   display: grid;
   grid-template-columns: 1fr;
-  // Align caption center under stage, matching center card width
   width: 36%;
   margin: 16px auto 0;
-  // On mobile, match mobile card width
+
+  // ── MOBILE ONLY CHANGE ──
+  // match center card width (70vw) so caption aligns under it
   @media (max-width: 768px) {
     width: 70%;
+    margin-top: 12px;
   }
 }
 
 .captionItem {
-  // All items occupy cell [1,1] — they overlap
   grid-column: 1;
   grid-row: 1;
   opacity: 0;
@@ -128,9 +130,3 @@
     font-size: 11px;
   }
 }
-
-// ── Section clips cards to viewport width ─────────────────────────────────────
-// (overflow:hidden on .section would clip, but we do it on a wrapper
-//  so captions below aren't clipped)
-// Add this to the parent page/section wrapper if needed:
-// overflow-x: hidden;
