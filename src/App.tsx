@@ -10,8 +10,10 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects/Project";
+import ADHYARATAN from "./pages/Projects/ProjectsPages/SHUBHANUGRAHA/ProjectPage.jsx";
 import Footer from "./components/Footer/Footer";
 import Form from "./pages/InquiryForm/Form.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
@@ -24,6 +26,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<Landing />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/adhyaratan" element={<ADHYARATAN />} />
         <Route path="/form" element={<Form />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
@@ -37,6 +40,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <AnimatedRoutes />
         <Footer />

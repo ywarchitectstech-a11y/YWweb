@@ -100,6 +100,7 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
     ],
+    link: "projects/adhyaratan",
   },
   {
     id: 5,
@@ -273,11 +274,13 @@ function ProjectCard({ project, index, onClick }) {
     <article
       className={styles.card}
       style={{ animationDelay: `${index * 0.07}s` }}
-      onClick={() => onClick(project.id)}
+      // onClick={() => onClick(project.id)}
       role="button"
-      tabIndex={0}
       onKeyDown={(e) => e.key === "Enter" && onClick(project.id)}
       aria-label={`View ${project.title}`}
+      onClick={() => project.link && onClick(project)}
+      // role="button"
+      tabIndex={project.link ? 0 : -1}
     >
       {/* Image */}
       <div className={styles.cardImageWrap}>
@@ -497,7 +500,11 @@ function Project() {
               key={project.id}
               project={project}
               index={i}
-              // onClick={(id) => navigate(`/project/${id}`)}
+              onClick={(project) => {
+                if (project.link) {
+                  navigate(`/${project.link}`);
+                }
+              }}
             />
           ))
         )}
@@ -506,236 +513,4 @@ function Project() {
   );
 }
 
-// ─────────────────────────────────────────────────────────────
-//  PROJECT DETAIL PAGE
-// ─────────────────────────────────────────────────────────────
-
-function ProjectDetailPage() {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const project = PROJECTS.find((p) => p.id === Number(id));
-  const [activeImg, setActiveImg] = useState(0);
-
-  // Scroll to top on mount
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [id]);
-
-  if (!project) {
-    return (
-      <div className={styles.notFound}>
-        <p>Project not found.</p>
-        <button className={styles.backBtn} onClick={() => navigate("/")}>
-          <IconArrowLeft /> Back to Projects
-        </button>
-      </div>
-    );
-  }
-
-  const related = PROJECTS.filter(
-    (p) => p.id !== project.id && p.discipline === project.discipline,
-  ).slice(0, 3);
-
-  const prevProject = PROJECTS[PROJECTS.indexOf(project) - 1];
-  const nextProject = PROJECTS[PROJECTS.indexOf(project) + 1];
-
-  return (
-    <div className={styles.detailPage}>
-      {/* ── NAV ── */}
-      <header className={styles.detailNav}>
-        <div className={styles.detailNavInner}>
-          <button
-            className={styles.detailBackBtn}
-            onClick={() => navigate("/")}
-            aria-label="Back to projects"
-          >
-            <IconArrowLeft />
-            <span>All Projects</span>
-          </button>
-          <span className={styles.detailNavLogo}>Studio</span>
-          <div className={styles.detailNavArrows}>
-            <button
-              className={styles.detailNavArrow}
-              disabled={!prevProject}
-              // onClick={() =>
-              // prevProject && navigate(`/project/${prevProject.id}`)
-              // }
-              aria-label="Previous project"
-            >
-              <IconArrowLeft />
-            </button>
-            <button
-              className={styles.detailNavArrow}
-              disabled={!nextProject}
-              // onClick={() =>
-              // nextProject && navigate(`/project/${nextProject.id}`)
-              // }
-              aria-label="Next project"
-            >
-              <IconArrowRight />
-            </button>
-          </div>
-        </div>
-      </header>
-
-      {/* ── HERO IMAGE ── */}
-      <div className={styles.detailHeroWrap}>
-        <img
-          className={styles.detailHeroImg}
-          src={project.gallery[activeImg]}
-          alt={project.title}
-        />
-        <div className={styles.detailHeroGrad} />
-        <div className={styles.detailHeroCaption}>
-          <span
-            className={styles.detailStatusPill}
-            data-status={project.status.toLowerCase().replace(" ", "-")}
-          >
-            {project.status}
-          </span>
-        </div>
-      </div>
-
-      {/* ── CONTENT ── */}
-      <div className={styles.detailContent}>
-        <div className={styles.detailContentInner}>
-          {/* Left column */}
-          <div className={styles.detailMain}>
-            <div className={styles.detailMeta}>
-              <span className={styles.detailDiscipline}>
-                {project.discipline}
-              </span>
-              <span className={styles.detailMetaDot} />
-              <span className={styles.detailLocation}>{project.location}</span>
-              <span className={styles.detailMetaDot} />
-              <span className={styles.detailYear}>{project.year}</span>
-            </div>
-
-            <h1 className={styles.detailTitle}>{project.title}</h1>
-            <p className={styles.detailDesc}>{project.longDesc}</p>
-
-            <div className={styles.detailTags}>
-              {project.tags.map((tag) => (
-                <span key={tag} className={styles.detailTag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Right column – stats */}
-          <aside className={styles.detailSidebar}>
-            <div className={styles.detailStats}>
-              {[
-                ["Location", project.location],
-                ["Status", project.status],
-                ["Year", project.year],
-                ["Total Area", project.area],
-                ["Floors", `G + ${Number(project.floors) - 1}`],
-                ["Discipline", project.discipline],
-              ].map(([label, val]) => (
-                <div key={label} className={styles.detailStat}>
-                  <span className={styles.detailStatLabel}>{label}</span>
-                  <span className={styles.detailStatValue}>{val}</span>
-                </div>
-              ))}
-            </div>
-          </aside>
-        </div>
-
-        {/* ── GALLERY ── */}
-        <section className={styles.detailGallery}>
-          <h2 className={styles.detailSectionTitle}>Gallery</h2>
-          <div className={styles.detailGalleryMain}>
-            <img
-              className={styles.detailGalleryMainImg}
-              src={project.gallery[activeImg]}
-              alt={`${project.title} view ${activeImg + 1}`}
-            />
-          </div>
-          <div className={styles.detailGalleryThumbs}>
-            {project.gallery.map((img, i) => (
-              <button
-                key={i}
-                className={`${styles.detailThumb} ${i === activeImg ? styles.detailThumbActive : ""}`}
-                onClick={() => setActiveImg(i)}
-                aria-label={`View image ${i + 1}`}
-                aria-pressed={i === activeImg}
-              >
-                <img src={img} alt={`Thumbnail ${i + 1}`} />
-              </button>
-            ))}
-          </div>
-        </section>
-
-        {/* ── RELATED ── */}
-        {related.length > 0 && (
-          <section className={styles.detailRelated}>
-            <h2 className={styles.detailSectionTitle}>Related Projects</h2>
-            <div className={styles.detailRelatedGrid}>
-              {related.map((p) => (
-                <article
-                  key={p.id}
-                  className={styles.relatedCard}
-                  // onClick={() => navigate(`/project/${p.id}`)}
-                  role="button"
-                  tabIndex={0}
-                  // onKeyDown={(e) =>
-                  //   e.key === "Enter" && navigate(`/project/${p.id}`)
-                  // }
-                >
-                  <div className={styles.relatedImgWrap}>
-                    <img
-                      className={styles.relatedImg}
-                      src={p.image}
-                      alt={p.title}
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className={styles.relatedInfo}>
-                    <span className={styles.relatedDisc}>{p.discipline}</span>
-                    <h3 className={styles.relatedTitle}>{p.title}</h3>
-                    <span className={styles.relatedLoc}>
-                      {p.location} · {p.year}
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* ── PREV / NEXT ── */}
-        <div className={styles.detailNav2}>
-          {prevProject && (
-            <button
-              className={styles.navProject}
-              // onClick={() => navigate(`/project/${prevProject.id}`)}
-            >
-              <span className={styles.navProjectDir}>
-                <IconArrowLeft /> Previous
-              </span>
-              <span className={styles.navProjectTitle}>
-                {prevProject.title}
-              </span>
-            </button>
-          )}
-          {nextProject && (
-            <button
-              className={`${styles.navProject} ${styles.navProjectNext}`}
-              // onClick={() => navigate(`/project/${nextProject.id}`)}
-            >
-              <span className={styles.navProjectDir}>
-                Next <IconArrowRight />
-              </span>
-              <span className={styles.navProjectTitle}>
-                {nextProject.title}
-              </span>
-            </button>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
 export default Project;
