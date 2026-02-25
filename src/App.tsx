@@ -11,7 +11,7 @@ import Contact from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects/Project";
 import Footer from "./components/Footer/Footer";
-
+import Form from "./pages/InquiryForm/Form.jsx";
 const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
@@ -21,9 +21,10 @@ const AnimatedRoutes = () => {
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Landing />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/form" element={<Form />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

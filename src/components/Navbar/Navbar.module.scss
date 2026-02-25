@@ -50,7 +50,7 @@
 .logoimg {
   width: 250px;
   @include responsive($mobile) {
-    width: 50px;
+    width: 40%;
   }
 }
 .desktopNav {
