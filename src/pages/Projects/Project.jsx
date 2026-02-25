@@ -7,7 +7,7 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import styles from "./ProjectsPage.module.scss";
-import project1 from "../../assets/projects/Project1.jpg";
+import project1 from "../../assets/projects/Project1.jpeg";
 import project2 from "../../assets/projects/Project2.jpg";
 import project3 from "../../assets/projects/Project3.jpeg";
 import project4 from "../../assets/projects/Project4.jpeg";
