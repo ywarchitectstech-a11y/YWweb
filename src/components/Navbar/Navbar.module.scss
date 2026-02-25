@@ -47,7 +47,12 @@
   letter-spacing: 0.02em;
   cursor: pointer;
 }
-
+.logoimg {
+  width: 250px;
+  @include responsive($mobile) {
+    width: 50px;
+  }
+}
 .desktopNav {
   display: flex;
   align-items: center;
