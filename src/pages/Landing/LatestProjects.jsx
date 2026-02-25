@@ -2,7 +2,7 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import gsap from "gsap";
 import styles from "./LatestProjects.module.scss";
-import project1 from "../../assets/projects/Project4.jpeg";
+import project1 from "../../assets/projects/Project1.webp";
 import project2 from "../../assets/projects/Project2.jpg";
 import project3 from "../../assets/projects/Project3.jpeg";
 import project4 from "../../assets/projects/Project4.jpeg";
