@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import styles from './Navbar.module.scss';
-
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import styles from "./Navbar.module.scss";
+import logo from "../../assets/logo.png";
 const navItems = [
-  { label: 'Home', path: '/#projects' },
-  { label: 'Projects', path: '/projects' },
-  { label: 'Services', path: '/disciplines' },
-  { label: 'About Us', path: '/about' },
-  { label: 'Articles', path: '/articles' },
+  { label: "Home", path: "/#projects" },
+  { label: "Projects", path: "/projects" },
+  { label: "Services", path: "/disciplines" },
+  { label: "About Us", path: "/about" },
+  { label: "Articles", path: "/articles" },
 ];
 
 const Navbar = () => {
@@ -16,52 +16,54 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-const [showNav, setShowNav] = useState(true);
-const [lastScrollY, setLastScrollY] = useState(0);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    // detect direction
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-      setShowNav(false); // scroll down → hide
-    } else {
-      setShowNav(true); // scroll up → show
-    }
+      // detect direction
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNav(false); // scroll down → hide
+      } else {
+        setShowNav(true); // scroll up → show
+      }
 
-    // optional background effect
-    setScrolled(currentScrollY > 50);
+      // optional background effect
+      setScrolled(currentScrollY > 50);
 
-    setLastScrollY(currentScrollY);
-  };
+      setLastScrollY(currentScrollY);
+    };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  return () => window.removeEventListener('scroll', handleScroll);
-}, [lastScrollY]);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   const isActive = (path: string) => {
-    if (path.startsWith('/#')) return location.pathname === '/';
+    if (path.startsWith("/#")) return location.pathname === "/";
     return location.pathname === path;
   };
 
   return (
     <>
-    <nav
-  className={`
+      <nav
+        className={`
     ${styles.navbar} 
-    ${scrolled || isOpen ? styles.scrolled : ''} 
-    ${!showNav ? styles.hidden : ''}
+    ${scrolled || isOpen ? styles.scrolled : ""} 
+    ${!showNav ? styles.hidden : ""}
   `}
->
+      >
         <div className={styles.container}>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -69,7 +71,7 @@ useEffect(() => {
             transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <Link to="/" className={styles.logo}>
-              YW Architects
+              <img className={styles.logoimg} src={logo} alt="" />
             </Link>
           </motion.div>
 
@@ -83,23 +85,25 @@ useEffect(() => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`${styles.navLink} ${isActive(item.path) ? styles.active : ''}`}
+                className={`${styles.navLink} ${isActive(item.path) ? styles.active : ""}`}
               >
                 {item.label}
               </Link>
             ))}
-           
           </motion.div>
- <motion.div
+          <motion.div
             className={styles.desktopNav}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-          > <Link to="/contact" className={styles.contactBtn}>
+          >
+            {" "}
+            <Link to="/contact" className={styles.contactBtn}>
               Contact Us
-            </Link></motion.div>
+            </Link>
+          </motion.div>
           <button
-            className={`${styles.hamburger} ${isOpen ? styles.open : ''}`}
+            className={`${styles.hamburger} ${isOpen ? styles.open : ""}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >

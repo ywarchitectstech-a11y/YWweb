@@ -31,7 +31,7 @@ const PROJECTS = [
     longDesc:
       "Adhya Radha-Krishna is a landmark mixed-use development that redefines urban living in Ahmedabad. Rising 14 floors, the building integrates premium retail on lower levels with carefully crafted residential units above. The warm brick-tone façade creates visual warmth while the strategic placement of greenery and open spaces ensures residents enjoy a connection to nature amid the urban environment. The project incorporates energy-efficient systems, rainwater harvesting, and sustainable materials throughout its construction, achieving a benchmark in responsible urban development.",
     tags: ["Mixed-Use", "Residential", "Retail", "Sustainable"],
-    image: project1,
+    image: project5,
     gallery: [
       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
