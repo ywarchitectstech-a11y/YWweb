@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +15,8 @@ import ADHYARATAN from "./pages/Projects/ProjectsPages/SHUBHANUGRAHA/ProjectPage
 import Footer from "./components/Footer/Footer";
 import Form from "./pages/InquiryForm/Form.jsx";
 import ScrollToTop from "./components/ScrollToTop";
+import IntroScreen from "./components/IntroScreen";
+import logo from "./assets/logo.png";
 const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
@@ -34,19 +37,33 @@ const AnimatedRoutes = () => {
   );
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <AnimatedRoutes />
-        <Footer />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  const [ready, setReady] = useState(false);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        {!ready && (
+          <IntroScreen
+            logo={<img src={logo} width={"40%"} />}
+            onComplete={() => setReady(true)}
+            duration={2400}
+          />
+        )}
+
+        {ready && (
+          <BrowserRouter>
+            <ScrollToTop />
+            <Navbar />
+            <AnimatedRoutes />
+            <Footer />
+          </BrowserRouter>
+        )}
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
