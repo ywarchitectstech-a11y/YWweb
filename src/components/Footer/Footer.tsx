@@ -33,13 +33,13 @@ const Footer = () => {
             <Link to="/" className={styles.footerLink}>
               Home
             </Link>
-            <Link to="/#projects" className={styles.footerLink}>
+            <Link to="/projects" className={styles.footerLink}>
               Projects
             </Link>
             <Link to="/#disciplines" className={styles.footerLink}>
               Services
             </Link>
-            <Link to="/about" className={styles.footerLink}>
+            <Link to="/#about" className={styles.footerLink}>
               About Us
             </Link>
             <Link to="/contact" className={styles.footerLink}>
