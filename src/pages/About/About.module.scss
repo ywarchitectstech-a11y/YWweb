@@ -1,0 +1,350 @@
+@use "../../styles/variables.module" as *;
+
+// ─── Page wrapper ──────────────────────────────────────────────────────────────
+.page {
+  background-color: $dark-bg;
+  width: 100%;
+}
+
+// ─── 1. HERO ──────────────────────────────────────────────────────────────────
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 340px;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: $tablet) {
+    height: 42vh;
+    min-height: 220px;
+  }
+
+  @media (max-width: $mobile) {
+    height: 35vh;
+    min-height: 180px;
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+// ─── 2. QUOTE SECTION ─────────────────────────────────────────────────────────
+.quoteSection {
+  background-color: $dark-bg;
+  padding: 5rem 0 4.5rem;
+
+  @media (max-width: $tablet) {
+    padding: 3.5rem 0 3rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 2.5rem 0 2rem;
+  }
+}
+
+.quoteInner {
+  max-width: $container-max;
+  margin: 0;
+  // padding: 0 2rem;
+  padding-right: 5%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 50%;
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.quoteText {
+  font-family: $font-display;
+  font-size: clamp(1.45rem, 3.2vw, 2.55rem);
+  font-weight: 300;
+  line-height: 1.38;
+  color: $text-primary;
+  width: 100%;
+  letter-spacing: -0.01em;
+  align-items: end;
+  margin-left: auto;
+  @media (max-width: $tablet) {
+    font-size: clamp(1.2rem, 4vw, 1.65rem);
+    max-width: 100%;
+  }
+}
+
+// ─── 3. STORY INTRO SECTION ───────────────────────────────────────────────────
+.introSection {
+  background-color: $dark-bg;
+  padding: 0 0 5rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 3rem;
+  }
+}
+
+.introGrid {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: 180px 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.sectionLabel {
+  font-family: $font-body;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: $text-muted;
+  text-transform: uppercase;
+  padding-top: 0.3rem;
+  line-height: 1.5;
+  color: #969595;
+  @media (max-width: $tablet) {
+    padding-top: 0;
+  }
+}
+
+.introBody {
+  text-align: justify;
+  font-family: $font-body;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: white;
+}
+
+// ─── 4. STAGGERED IMAGE PAIR ──────────────────────────────────────────────────
+.gallerySection {
+  background-color: $dark-bg;
+  padding: 2rem 0 5rem;
+
+  @media (max-width: $tablet) {
+    padding: 1rem 0 3rem;
+  }
+}
+
+.galleryGrid {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.galleryBuildingWrap {
+  overflow: hidden;
+}
+
+.galleryBuildingImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.galleryTeamWrap {
+  overflow: hidden;
+  margin-top: 4rem;
+
+  @media (max-width: $laptop) {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: $tablet) {
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 0;
+  }
+}
+
+.galleryTeamImg {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+// ─── 5. ALL SCALES SECTION ────────────────────────────────────────────────────
+.allScalesSection {
+  background-color: $dark-bg;
+  padding: 3rem 0 5rem;
+
+  @media (max-width: $tablet) {
+    padding: 2rem 0 3rem;
+  }
+}
+
+.allScalesGrid {
+  // max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: 180px 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.allScalesBody {
+  font-family: $font-body;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.9;
+  @media (max-width: $tablet) {
+    text-align: justify;
+  }
+  color: white;
+  // text-align: justify;
+}
+
+// ─── 6. SECOND BUILDING IMAGE ─────────────────────────────────────────────────
+.buildingSection {
+  background-color: $dark-bg;
+  padding: 0 0 5rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 3rem;
+  }
+}
+
+.buildingSectionInner {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+  }
+}
+
+.buildingImgWrap {
+  width: 52%;
+  overflow: hidden;
+
+  @media (max-width: $laptop) {
+    width: 65%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 80%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.buildingImg {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+// ─── 7. ENVIRONMENTAL & FUTURE SECTION ───────────────────────────────────────
+.futureSection {
+  background-color: $dark-bg;
+  padding: 3rem 0 6rem;
+
+  @media (max-width: $tablet) {
+    padding: 2rem 0 4rem;
+  }
+}
+
+.futureGrid {
+  max-width: 100%;
+
+  margin: 0 auto;
+  padding: 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: $laptop) {
+    grid-template-columns: 180px 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.futureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.futureHeading {
+  font-family: $font-display;
+  font-size: clamp(0.95rem, 1.4vw, 20px);
+  font-weight: 400;
+  color: $text-primary;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.futureBody {
+  font-family: $font-body;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: $text-secondary;
+  @media (max-width: $tablet) {
+    text-align: justify;
+  }
+}

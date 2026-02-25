@@ -1,0 +1,144 @@
+@use "../../styles/variables.module" as *;
+
+.contactPage {
+  padding-top: calc($nav-height + 2rem);
+}
+
+.heroArea {
+  @include container;
+  @include section-padding;
+  padding-bottom: 2rem;
+}
+
+.contactTitle {
+  font-family: $font-display;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: $text-primary;
+  margin-bottom: 3rem;
+
+  @include responsive($tablet) {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+}
+.ImageForm {
+  position: absolute;
+  top: 150px;
+  width: 600px;
+  object-fit: cover;
+  right: 150px;
+  height: 600px;
+}
+.formSection {
+  @include container;
+  max-width: 550px;
+  margin-left: 0;
+  padding-left: 2rem;
+
+  @include responsive($tablet) {
+    max-width: 100%;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 0 auto;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background: transparent;
+  border: 1px solid $border-subtle;
+  padding: 0.9rem 1rem;
+  font-family: $font-body;
+  font-size: 0.9rem;
+  color: $text-primary;
+  outline: none;
+  transition: border-color 0.3s ease;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    border-color: $gold;
+  }
+}
+
+.textarea {
+  composes: input;
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submitBtn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid $gold;
+  color: $gold;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $gold;
+    color: $dark-bg;
+  }
+}
+
+// Info section
+.infoSection {
+  @include container;
+  @include section-padding;
+  max-width: 1100px;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+
+  @include responsive($tablet) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.infoCard {
+  h3 {
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $text-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  p,
+  a {
+    font-size: 0.9rem;
+    color: $text-secondary;
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: $gold;
+  }
+}

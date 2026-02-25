@@ -1,0 +1,50 @@
+// Colors (use CSS custom properties for theming)
+$gold: hsl(40, 72%, 55%);
+$dark-bg: hsl(0, 0%, 10%);
+$darker-bg: hsl(0, 0%, 7%);
+$section-bg: #212121;
+$text-primary: hsl(0, 0%, 95%);
+$text-secondary: hsl(0, 0%, 65%);
+$text-muted: hsl(0, 0%, 45%);
+$border-subtle: hsl(0, 0%, 22%);
+
+// Typography
+$font-display: "Sora", sans-serif;
+$font-body: "Sora", sans-serif;
+
+// Spacing
+$section-padding: 6rem;
+$section-padding-mobile: 3rem;
+$container-max: 1400px;
+$nav-height: 80px;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+
+// Mixins
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 1.25rem;
+  }
+}
+
+@mixin section-padding {
+  padding: $section-padding 0;
+
+  @media (max-width: $tablet) {
+    padding: $section-padding-mobile 0;
+  }
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

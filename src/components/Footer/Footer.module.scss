@@ -1,0 +1,159 @@
+@use '../../styles/variables.module' as *;
+
+.ctaBanner {
+  @include section-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include container;
+  border-top: 1px solid $border-subtle;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  @include responsive($tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.ctaTitle {
+  font-family: $font-display;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: $text-primary;
+
+  @include responsive($tablet) {
+    font-size: 1.35rem;
+  }
+}
+
+.ctaEmail {
+  font-family: $font-body;
+  font-size: 1.5rem;
+  color: $gold;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include responsive($tablet) {
+    font-size: 1.15rem;
+  }
+}
+
+.footer {
+  background-color: $darker-bg;
+  @include section-padding;
+}
+
+.footerGrid {
+  @include container;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+  gap: 3rem;
+
+  @include responsive($laptop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  @include responsive($mobile) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.footerBrand {
+  h3 {
+    font-family: $font-display;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: $gold;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: $text-secondary;
+    line-height: 1.6;
+  }
+}
+
+.footerColumn {
+  h4 {
+    font-family: $font-body;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.footerLink {
+  display: block;
+  font-size: 0.85rem;
+  color: $text-secondary;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.footerText {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}
+
+.footerContactItem {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  line-height: 1.7;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $gold;
+  }
+}
+
+.bottomBar {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid $border-subtle;
+  font-size: 0.8rem;
+  color: $text-muted;
+
+  @include responsive($tablet) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.bottomLinks {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: $text-muted;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+}
