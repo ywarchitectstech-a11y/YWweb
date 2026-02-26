@@ -1,29 +1,76 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./HeroImg.jpg";
-import FullImage from "./FullImage.jpg";
-import LeftImg from "./HeroImg.jpg";
-import RightImg from "./HeroImg.jpg";
+import HeroImg from "./Img (4).webp";
+import FullImage from "./Img (3).webp";
+import LeftImg from "./Img (8).webp";
+import RightImg from "./Img (5).webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
-
+import img1 from "./Img (1).webp";
+import img2 from "./Img (2).webp";
+import img3 from "./Img (3).webp";
+import img4 from "./Img (4).webp";
+import img5 from "./Img (5).webp";
+import img6 from "./Img (6).webp";
+import img7 from "./Img (7).webp";
+import img8 from "./Img (8).webp";
+import img9 from "./Img (9).webp";
+import img10 from "./Img (10).webp";
+import img11 from "./Img (11).webp";
+import img12 from "./Img (12).webp";
+import img13 from "./Img (13).webp";
+import img14 from "./Img (14).webp";
+import img15 from "./Img (15).webp";
+import img16 from "./Img (16).webp";
+import img17 from "./Img (17).webp";
+import img18 from "./Img (18).webp";
+import img19 from "./Img (19).webp";
+import img20 from "./Img (20).webp";
+import img21 from "./Img (21).webp";
+import img22 from "./Img (22).webp";
+import img23 from "./Img (23).webp";
+import img24 from "./Img (24).webp";
+import img25 from "./Img (25).webp";
+import img26 from "./Img (26).webp";
+import img27 from "./Img (27).webp";
+import img28 from "./Img (28).webp";
+import img29 from "./Img (29).webp";
+import img30 from "./Img (30).webp";
+import img31 from "./Img (31).webp";
+import img32 from "./Img (32).webp";
 const images = [
-  {
-    id: 1,
-    src: RightImg,
-    title: "Residential Tower",
-    orientation: "landscape",
-  },
-  { id: 2, src: HeroImg, title: "Commercial Complex", orientation: "portrait" },
-  {
-    id: 3,
-    src: HeroImg,
-    title: "Mixed Use Development",
-    orientation: "landscape",
-  },
-  { id: 4, src: RightImg, title: "Modern Facade", orientation: "portrait" },
-  { id: 5, src: HeroImg, title: "Shopping Mall", orientation: "landscape" },
-  { id: 6, src: RightImg, title: "Interior Lobby", orientation: "portrait" },
+  { id: 1, src: img1 },
+  { id: 2, src: img2 },
+  { id: 3, src: img3 },
+  { id: 4, src: img4 },
+  { id: 5, src: img5 },
+  { id: 6, src: img6 },
+  { id: 7, src: img7 },
+  { id: 8, src: img8 },
+  { id: 9, src: img9 },
+  { id: 10, src: img10 },
+  { id: 11, src: img11 },
+  { id: 12, src: img12 },
+  { id: 13, src: img13 },
+  { id: 14, src: img14 },
+  { id: 15, src: img15 },
+  { id: 16, src: img16 },
+  { id: 17, src: img17 },
+  { id: 18, src: img18 },
+  { id: 19, src: img19 },
+  { id: 20, src: img20 },
+  { id: 21, src: img21 },
+  { id: 22, src: img22 },
+  { id: 23, src: img23 },
+  { id: 24, src: img24 },
+  { id: 25, src: img25 },
+  { id: 26, src: img26 },
+  { id: 27, src: img27 },
+  { id: 28, src: img28 },
+  { id: 29, src: img29 },
+  { id: 30, src: img30 },
+  { id: 31, src: img31 },
+  { id: 32, src: img32 },
 ];
 
 export default function AdhyaratanProjectPage() {

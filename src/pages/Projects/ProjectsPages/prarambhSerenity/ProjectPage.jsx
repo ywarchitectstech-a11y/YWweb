@@ -1,31 +1,36 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./HeroImg.jpg";
-import FullImage from "./FullImage.jpg";
-import LeftImg from "./HeroImg.jpg";
-import RightImg from "./HeroImg.jpg";
+import HeroImg from "./Img (5).webp";
+import FullImage from "./Img (1).webp";
+import LeftImg from "./Img (1).webp";
+import RightImg from "./Img (3).webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
+import img1 from "./Img (1).webp";
+import img2 from "./Img (2).webp";
+import img3 from "./Img (3).webp";
+import img4 from "./Img (4).webp";
+import img5 from "./Img (5).webp";
+import img6 from "./Img (6).webp";
+import img7 from "./Img (7).webp";
+import img8 from "./Img (8).webp";
+import img9 from "./Img (9).webp";
+import img10 from "./Img (10).webp";
+import img11 from "./Img (11).webp";
 
 const images = [
-  {
-    id: 1,
-    src: RightImg,
-    title: "Residential Tower",
-    orientation: "landscape",
-  },
-  { id: 2, src: HeroImg, title: "Commercial Complex", orientation: "portrait" },
-  {
-    id: 3,
-    src: HeroImg,
-    title: "Mixed Use Development",
-    orientation: "landscape",
-  },
-  { id: 4, src: RightImg, title: "Modern Facade", orientation: "portrait" },
-  { id: 5, src: HeroImg, title: "Shopping Mall", orientation: "landscape" },
-  { id: 6, src: RightImg, title: "Interior Lobby", orientation: "portrait" },
+  { id: 1, src: img1 },
+  { id: 2, src: img2 },
+  { id: 3, src: img3 },
+  { id: 4, src: img4 },
+  { id: 5, src: img5 },
+  { id: 6, src: img6 },
+  { id: 7, src: img7 },
+  { id: 8, src: img8 },
+  { id: 9, src: img9 },
+  { id: 10, src: img10 },
+  { id: 11, src: img11 },
 ];
-
 export default function AdhyaratanProjectPage() {
   const [open, setOpen] = useState(false);
 

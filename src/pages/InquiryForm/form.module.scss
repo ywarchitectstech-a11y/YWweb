@@ -1,0 +1,145 @@
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 56px 24px 100px;
+  font-family: "Sora", sans-serif;
+  background: #f0ece4;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #e2d9c8;
+  padding-bottom: 28px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+
+.logoBlock img {
+  width: 120px;
+  margin-bottom: 8px;
+}
+
+.logoName {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  span {
+    color: #b89a5a;
+  }
+}
+
+.logoTag {
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #b0a070;
+}
+
+.headerRight {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #b0a070;
+  text-transform: uppercase;
+}
+
+.hero {
+  margin-bottom: 44px;
+
+  h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 300;
+
+    em {
+      color: #b89a5a;
+      font-style: italic;
+    }
+  }
+
+  p {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #8a7850;
+  }
+}
+
+.formCard {
+  background: #faf8f4;
+  padding: 48px 52px;
+  border-radius: 6px;
+  box-shadow: 0 4px 32px rgba(180, 154, 90, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 32px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+input,
+textarea,
+select {
+  border: none;
+  border-bottom: 1px solid #e2d9c8;
+  padding: 10px 0 12px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  color: #000000 !important;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submitRow {
+  margin-top: 40px;
+}
+
+button {
+  background: linear-gradient(135deg, #b89a5a, #d4b87a);
+  border: none;
+  padding: 16px 48px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(0, 0, 0) !important;
+}
+
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: #faf8f4;
+  border-left: 4px solid #b89a5a;
+  padding: 18px 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.error {
+  border-left-color: #c0392b;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .formCard {
+    padding: 32px 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
