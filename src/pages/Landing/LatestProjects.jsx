@@ -7,7 +7,7 @@ import project2 from "../../assets/projects/Project2.jpg";
 import project3 from "../../assets/projects/Project3.jpeg";
 import project4 from "../../assets/projects/Project4.jpeg";
 import project5 from "../../assets/projects/Project5.png";
-import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.jpeg";
+import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.webp";
 import INFINI from "../../assets/projects/INFINI/Image1.jpg";
 import Citylight from "../../assets/projects/CityLight/Image1.jpg";
 import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";

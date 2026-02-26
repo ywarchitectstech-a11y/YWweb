@@ -1,8 +1,10 @@
 import styles from "./About.module.scss";
-import HERO_IMG from "../../assets/AboutHero.png";
+import HERO_IMG from "../../assets/abouthero.webp";
 import BUILDING1_IMG from "../../assets/AboutusImg1.jpg";
-import TEAM_IMG from "../../assets/TeamImg.png";
-import BUILDING2_IMG from "../../assets/AboutusImg1.jpg";
+import TEAM_IMG from "../../assets/CeoImage.jpeg";
+import BUILDING2_IMG from "../../assets/aboutProject2.jpeg";
+import logo from "../../assets/logo.png";
+import ShinyText from "../../components/ShinyText";
 // ─── Placeholder images — replace with actual project assets ───────────────────
 // Hero: mountain landscape with group of people
 
@@ -18,6 +20,21 @@ export default function AboutUs() {
           alt="YW Architects team at mountain landscape"
           className={styles.heroImage}
         />
+        <img className={styles.logo} src={logo} alt="" />
+        <ShinyText
+          className={styles.heroText}
+          text="Designed For Living, Built For Life"
+          speed={2}
+          delay={0}
+          color="#d4d4d4ff"
+          shineColor="#ffffff"
+          spread={220}
+          direction="left"
+          yoyo={false}
+          pauseOnHover={false}
+          disabled={false}
+        />
+        {/* <h2 className={styles.heroText}>Designed For Living, Built For Life</h2> */}
       </section>
 
       {/* ── 2. LARGE QUOTE ─────────────────────────────────────────── */}
@@ -39,10 +56,14 @@ export default function AboutUs() {
             practice delivering intelligent design solutions across diverse
             scales and typologies. Our work spans public and private
             developments, adaptive reuse, landscape design, interiors, and
-            infrastructure.
+            infrastructure. The practice is led by <b>Yogesh Wakchaure</b>,
+            Founder and Principal Architect, whose vision and strategic
+            leadership shape the firm’s design philosophy and execution
+            standards. With extensive experience in architectural planning and
+            project coordination, he ensures every project reflects clarity,
+            technical precision, and long-term value.
             <br />
-            <br />
-            We operate through a collaborative, systems-led approach,
+            <br /> We operate through a collaborative, systems-led approach,
             integrating clients, developers, and specialist teams into a single,
             informed process. By strategically guiding each project from concept
             to execution, we ensure outcomes that are economically viable,

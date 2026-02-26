@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import SEO from "@/components/SEO/SEO";
 import PageTransition from "@/components/PageTransition/PageTransition";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
@@ -9,7 +10,7 @@ import project1 from "../../assets/projects/Project1.jpg";
 import project2 from "../../assets/projects/Project2.jpg";
 import project3 from "../../assets/projects/Project3.jpeg";
 import project4 from "../../assets/projects/Project4.jpeg";
-import { useRef, useState, useCallback } from "react";
+import React, { useRef, useState, useCallback, useEffect } from "react";
 import heroImg from "@/assets/LandingPageHero2.png";
 import project11 from "@/assets/project-1.jpg";
 import project22 from "@/assets/project-2.jpg";
@@ -90,6 +91,126 @@ const Landing = () => {
     { label: "Landscape Design", img: project4 },
     { label: "Infrastructure", img: DisciplineImg },
   ];
+  // reviewas
+
+  const testimonialsData = [
+    {
+      quote:
+        "I can confidently say that YW Architect sets a high standard in architectural design for complex tower projects.",
+      name: "Mr. Dileep Solanki",
+      role: "Tanish Associates",
+      image: "/assets/testimonials/dileep-solanki.jpg",
+    },
+    {
+      quote:
+        "I would confidently recommend your architectural office to any developer seeking exceptional design services, strong coordination, and reliable project execution.",
+      name: "Mr. Prashant Thorat",
+      role: "",
+      image: "/assets/testimonials/default-user.jpg",
+    },
+    {
+      quote:
+        "The design by YW Architects successfully balances privacy for individual bungalow plots with a strong sense of community, while also ensuring optimal land utilization and compliance with all planning regulations.",
+      name: "Mr. Laxmichand Borana",
+      role: "",
+      image: "/assets/testimonials/default-user.jpg",
+    },
+    {
+      quote:
+        "We are extremely satisfied with the outcome and confidently recommend YW Architect for large-scale luxury bungalow plot layouts and premium residential developments.",
+      name: "Mr. Farooque Khatri",
+      role: "Director At Nice Infracon",
+      image: "/assets/testimonials/farooque-khatri.jpg",
+    },
+    {
+      quote:
+        "We engaged YW Architects for the planning and design of our school campus, and the outcome exceeded our expectations in every respect.",
+      name: "Mr. Sudhir Mungase",
+      role: "Dyanada School Pune",
+      image: "/assets/testimonials/sudhir-mungase.jpg",
+    },
+    {
+      quote:
+        "Your designs are not only creative and well thought out, but also practical and highly buildable.",
+      name: "Mr. Pritam Jagtap",
+      role: "Director At Infini Modern Reality",
+      image: "/assets/testimonials/pritam-jagtap.jpg",
+    },
+    {
+      quote:
+        "What YW Architects truly sets apart is their commitment to quality and proactive approach to problem-solving. Any challenges that arose were addressed promptly and thoughtfully.",
+      name: "Mr. Rajesh Pokharkar",
+      role: "Director At Adhya Properties",
+      image: "/assets/testimonials/rajesh-pokharkar.jpg",
+    },
+    {
+      quote:
+        "The level of detail in the drawings, responsiveness to questions, and willingness to collaborate made the construction process smooth and efficient.",
+      name: "Mr. Ashish Landage",
+      role: "Pioneer Developers",
+      image: "/assets/testimonials/ashish-landage.jpg",
+    },
+    {
+      quote:
+        "The high-rise tower design is elegant, modern, and highly efficient, while the apartment layouts are exceptionally well planned.",
+      name: "Mr. Chetan Salunke",
+      role: "Director At Shubh Properties",
+      image: "/assets/testimonials/chetan-salunke.jpg",
+    },
+    {
+      quote:
+        "As a builder, it is a pleasure to collaborate with an architectural team that consistently demonstrates professionalism, clarity, and excellence at every stage of a project.",
+      name: "Mr. Harsh Choudhary",
+      role: "Director At Platinum Developers",
+      image: "/assets/testimonials/harsh-choudhary.jpg",
+    },
+    {
+      quote:
+        "Design challenges were handled by YW Architects with thoughtful solutions that balanced architectural intent, engineering requirements, and construction realities.",
+      name: "Mr. Bharat Choudhary",
+      role: "Director At Platinum Developers",
+      image: "/assets/testimonials/bharat-choudhary.jpg",
+    },
+    {
+      quote:
+        "The luxury apartments designed by YW Architect sold very quickly, demonstrating the success of the design in meeting both buyer expectations and lifestyle needs.",
+      name: "Mr. Sailesh Agrawal",
+      role: "Director At Mantra Properties",
+      image: "/assets/testimonials/sailesh-agrawal.jpg",
+    },
+    {
+      quote:
+        "As a builder, it is rare and valuable to work with YW Architects that combines strong design vision with practical, construction-ready solutions.",
+      name: "Mr. Nitesh Patel",
+      role: "Director At Vision Creatives",
+      image: "/assets/testimonials/nitesh-patel.jpg",
+    },
+    {
+      quote:
+        "What truly distinguishes YW Architect is their strategic approach to luxury development attention to orientation, views, circulation, amenities, and future scalability was evident throughout the project.",
+      name: "Mr. Vipul Bhavani",
+      role: "Director At Vision Creatives",
+      image: "/assets/testimonials/vipul-bhavani.jpg",
+    },
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // fade out first
+
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % testimonialsData.length);
+        setFade(true); // fade in
+      }, 300); // half of animation time
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+  const testimonial = testimonialsData[index];
+
   return (
     <PageTransition>
       <SEO
@@ -325,19 +446,23 @@ const Landing = () => {
         {/* Testimonial */}
         <section className={styles.testimonial}>
           <AnimatedSection>
-            <h2 className={styles.testimonialTitle}>What Our Client Say</h2>
-            <blockquote className={styles.testimonialQuote}>
-              "The high-rise tower design is elegant, modern, and highly
-              efficient, while the apartment layouts are exceptionally well
-              planned"
-              <br />
+            <h2 className={styles.testimonialTitle}>What Our Clients Say</h2>
+
+            <blockquote
+              className={`${styles.testimonialQuote} ${
+                fade ? styles.fadeEnterActive : styles.fadeExitActive
+              }`}
+            >
+              "{testimonial.quote}"
             </blockquote>
-            <div className={styles.testimonialdir}>
-              {" "}
-              <strong>Mr. Chetan Salunke</strong>
-              <p className={styles.testimonialAuthor}>
-                Director At Shubh Properties
-              </p>
+
+            <div
+              className={`${styles.testimonialdir} ${
+                fade ? styles.fadeEnterActive : styles.fadeExitActive
+              }`}
+            >
+              <strong>{testimonial.name}</strong>
+              <p className={styles.testimonialAuthor}>{testimonial.role}</p>
             </div>
           </AnimatedSection>
         </section>

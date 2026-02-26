@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import styles from "./ProjectsPage.module.scss";
 
-import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.jpeg";
+import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.webp";
 import INFINI from "../../assets/projects/INFINI/Image2.jpg";
 import Citylight from "../../assets/projects/CityLight/Image1.jpg";
 import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";
@@ -177,6 +177,7 @@ const PROJECTS = [
     tags: ["Mixed-Use"],
     image: AdhyaRatan,
     gallery: [],
+    link: "projects/adhya-ratan",
   },
   {
     id: 2,
@@ -191,6 +192,7 @@ const PROJECTS = [
     tags: ["Mixed-Use"],
     image: INFINI,
     gallery: [],
+    link: "projects/infini-jagtap-city",
   },
   {
     id: 3,
@@ -205,6 +207,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: Citylight,
     gallery: [],
+    link: "projects/platinum-citylights",
   },
   {
     id: 4,
@@ -219,6 +222,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: AdhyaRadha,
     gallery: [],
+    link: "projects/adhya-radha-krishna",
   },
   {
     id: 5,
@@ -233,6 +237,7 @@ const PROJECTS = [
     tags: ["Commercial"],
     image: TanishUrbania,
     gallery: [],
+    link: "projects/tanish-urbania",
   },
   {
     id: 6,
@@ -247,6 +252,7 @@ const PROJECTS = [
     tags: ["Institutional"],
     image: AlandiSchool,
     gallery: [],
+    link: "projects/alandi-school",
   },
   {
     id: 7,
@@ -261,6 +267,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: PrarambhSerenity,
     gallery: [],
+    link: "projects/prarambh-serenity",
   },
   {
     id: 8,
@@ -275,6 +282,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: ShubAnugrah,
     gallery: [],
+    link: "projects/shubh-anugrah",
   },
   {
     id: 9,
@@ -289,6 +297,7 @@ const PROJECTS = [
     tags: ["Commercial"],
     image: Vision,
     gallery: [],
+    link: "projects/vision",
   },
   {
     id: 10,
@@ -303,6 +312,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: TanishIndrayani,
     gallery: [],
+    link: "projects/tanish-indrayani",
   },
   {
     id: 11,
@@ -317,6 +327,7 @@ const PROJECTS = [
     tags: ["Commercial"],
     image: Pioneer,
     gallery: [],
+    link: "projects/pioneer",
   },
   {
     id: 12,
@@ -331,6 +342,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: Kalp,
     gallery: [],
+    link: "projects/kalp-99",
   },
   {
     id: 13,
@@ -345,6 +357,7 @@ const PROJECTS = [
     tags: ["Residential"],
     image: BhosaleGalaxy,
     gallery: [],
+    link: "projects/bhosale-galaxy",
   },
   {
     id: 14,
@@ -359,6 +372,7 @@ const PROJECTS = [
     tags: ["Commercial"],
     image: BhosaleIcon,
     gallery: [],
+    link: "projects/bhosale-icon",
   },
   {
     id: 15,
@@ -373,6 +387,7 @@ const PROJECTS = [
     tags: ["Commercial"],
     image: BeState,
     gallery: [],
+    link: "projects/bestate-axis",
   },
   {
     id: 16,
@@ -387,6 +402,7 @@ const PROJECTS = [
     tags: ["Mixed-Use"],
     image: Mantra360,
     gallery: [],
+    link: "projects/mantra-360",
   },
 ];
 const unique = (key) => ["All", ...new Set(PROJECTS.map((p) => p[key]))];
@@ -549,7 +565,8 @@ function ProjectCard({ project, index, onClick }) {
       {/* Body */}
       <div className={styles.cardBody}>
         <div className={styles.cardMeta}>
-          <span className={styles.cardDiscipline}>{project.discipline}</span>
+          {/* <span className={styles.cardDiscipline}>{project.discipline}</span> */}
+
           <span className={styles.cardMetaDot} />
           {/* <span className={styles.cardLocation}>{project.location}</span> */}
           {/* <span className={styles.cardYear}>{project.year}</span> */}

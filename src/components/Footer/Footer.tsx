@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "./Footer.module.scss";
-
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
@@ -80,6 +80,31 @@ const Footer = () => {
             <a href="tel:+919623901901" className={styles.footerContactItem}>
               +91 9623901901
             </a>
+            <div className={styles.socialContainer}>
+              <p className={styles.heading}>Follow Us</p>
+
+              <div className={styles.links}>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.icon}
+                >
+                  <FaInstagram />
+                  <span>Instagram</span>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.icon}
+                >
+                  <FaLinkedin />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

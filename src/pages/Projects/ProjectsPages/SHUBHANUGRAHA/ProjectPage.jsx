@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
 import HeroImg from "./HeroImg.jpg";
@@ -7,7 +7,43 @@ import LeftImg from "./HeroImg.jpg";
 import RightImg from "./HeroImg.jpg";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 
+const images = [
+  {
+    id: 1,
+    src: RightImg,
+    title: "Residential Tower",
+    orientation: "landscape",
+  },
+  { id: 2, src: HeroImg, title: "Commercial Complex", orientation: "portrait" },
+  {
+    id: 3,
+    src: HeroImg,
+    title: "Mixed Use Development",
+    orientation: "landscape",
+  },
+  { id: 4, src: RightImg, title: "Modern Facade", orientation: "portrait" },
+  { id: 5, src: HeroImg, title: "Shopping Mall", orientation: "landscape" },
+  { id: 6, src: RightImg, title: "Interior Lobby", orientation: "portrait" },
+];
+
 export default function AdhyaratanProjectPage() {
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
+
   return (
     <div className={styles.DetailedPage}>
       <div className={styles.heroSection}>
@@ -28,7 +64,7 @@ export default function AdhyaratanProjectPage() {
       </div>
       <div className={styles.AboutSection}>
         <div className={styles.leftSide}>
-          <h4>Gallery</h4>
+          <h4 onClick={() => setOpen(true)}> Gallery</h4>
         </div>
         <div className={styles.rightSide}>
           <p className={styles.headText}>
@@ -46,11 +82,10 @@ export default function AdhyaratanProjectPage() {
             was once the precinct’s most prominent and ambitious landmark.
           </p>
           <div className={styles.stats}>
-            {/* Row 1 */}
             <div className={styles.row}>
               <div className={styles.col}>
                 <p>Status</p>
-                <h4>On Going</h4>
+                <h4>To be initiated</h4>
               </div>
 
               <div className={styles.col}>
@@ -72,7 +107,6 @@ export default function AdhyaratanProjectPage() {
               </div>
             </div>
 
-            {/* Row 2 */}
             <div className={`${styles.row} ${styles.three}`}>
               <div className={styles.col}>
                 <p>Size</p>
@@ -92,7 +126,7 @@ export default function AdhyaratanProjectPage() {
               <div className={styles.col}>
                 <p>Services Provided</p>
                 <h4>
-                  Concept & architectural design, <br />
+                  Concept & architectural design <br />
                   Sanction drawings & authority submissions <br />
                   DCR compliance & documentation <br />
                   Municipal approvals & NOCs
@@ -114,6 +148,37 @@ export default function AdhyaratanProjectPage() {
           </div>
         </div>
       </div>
+      {open && (
+        <div
+          className={styles.overlay}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setOpen(false);
+          }}
+        >
+          <div className={styles.popup}>
+            <div className={styles["close-btn"]}>
+              <button
+                className={styles["close-x"]}
+                onClick={() => setOpen(false)}
+                aria-label="Close gallery"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className={styles["img-list"]}>
+              {images.map((img) => (
+                <div
+                  key={img.id}
+                  className={`${styles["img-item"]} ${styles[img.orientation]}`}
+                >
+                  <img src={img.src} alt={img.title} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

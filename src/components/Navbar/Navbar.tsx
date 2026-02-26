@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.png";
 const navItems = [
-  { label: "Home", path: "/#projects" },
+  { label: "Home", path: "/" },
   { label: "Projects", path: "/projects" },
   // { label: "Services", path: "/#disciplines" },
-  { label: "About Us", path: "/#about" },
+  { label: "About Us", path: "/about" },
   // { label: "Articles", path: "/#articles" },
 ];
 

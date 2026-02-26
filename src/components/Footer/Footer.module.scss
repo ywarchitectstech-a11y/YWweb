@@ -1,4 +1,4 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .ctaBanner {
   @include section-padding;
@@ -154,6 +154,63 @@
 
     &:hover {
       color: $gold;
+    }
+  }
+}
+.socialContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .heading {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    // text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+
+    svg {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: #e1306c;
+    }
+  }
+
+  .icon:nth-child(2):hover {
+    color: #0077b5;
+  }
+}
+
+// 📱 Mobile
+@media (max-width: 600px) {
+  .socialContainer {
+    align-items: center;
+    text-align: center;
+
+    .links {
+      justify-content: center;
+    }
+
+    .icon span {
+      display: none;
     }
   }
 }

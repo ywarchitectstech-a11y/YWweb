@@ -4,7 +4,7 @@ import PageTransition from "@/components/PageTransition/PageTransition";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 import Footer from "@/components/Footer/Footer";
 import styles from "./Contact.module.scss";
-import project1 from "../../assets/projects/contactimg.webp";
+import project1 from "../../assets/ContactImg.webp";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +30,10 @@ const Contact = () => {
       <main className={styles.contactPage}>
         <div className={styles.heroArea}>
           <AnimatedSection>
-            <h1 className={styles.contactTitle}>Contact Us</h1>
+            <h1 className={styles.contactTitle}>
+              Contact We’d love to hear from you. Depending on your inquiry,
+              you’ll find the contact details below. 
+            </h1>
           </AnimatedSection>
         </div>
 
@@ -38,6 +41,7 @@ const Contact = () => {
           <AnimatedSection>
             <div className={styles.formWrapper}>
               <form className={styles.form} onSubmit={handleSubmit}>
+              <h2>Schedule Now</h2>
                 <div className={styles.inputGroup}>
                   <input
                     type="text"
