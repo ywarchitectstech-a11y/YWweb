@@ -21,6 +21,8 @@ import BhosaleGalaxy from "../../assets/projects/BhosaleGalaxy/Image1.png";
 import BhosaleIcon from "../../assets/projects/BhosaleIcon/Image1.png";
 import BeState from "../../assets/projects/BeState/Image1.jpg";
 import Mantra360 from "../../assets/projects/Mantra360/Image1.jpg";
+import Kalp from "../../assets/projects/Kalp/Image1.jpg";
+import Vision from "../../assets/projects/Vision/Image1.jpg";
 
 // const BASE_PROJECTS = [
 //   {
@@ -164,12 +166,12 @@ const BASE_PROJECTS = [
     subtitle: "",
     img: ShubAnugrah,
   },
-  // {
-  //   id: 9,
-  //   title: "VISION",
-  //   subtitle: "",
-  //   img: null, // ⚠️ No import yet
-  // },
+  {
+    id: 9,
+    title: "VISION",
+    subtitle: "",
+    img: Vision, // ⚠️ No import yet
+  },
   {
     id: 10,
     title: "TANISH INDRAYANI",
@@ -182,12 +184,12 @@ const BASE_PROJECTS = [
     subtitle: "",
     img: Pioneer,
   },
-  // {
-  //   id: 12,
-  //   title: "KALP 99",
-  //   subtitle: "",
-  //   img: null, // ⚠️ No import yet
-  // },
+  {
+    id: 12,
+    title: "KALP 99",
+    subtitle: "",
+    img: Kalp, // ⚠️ No import yet
+  },
   {
     id: 13,
     title: "BHOSALE GALAXY",

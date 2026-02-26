@@ -536,13 +536,13 @@ function ProjectCard({ project, index, onClick }) {
             View Project <IconArrowRight />
           </span>
         </div>
-        {/* Status pill */}
-        <span
+
+        {/* <span
           className={styles.cardStatusPill}
           data-status={project.status.toLowerCase().replace(" ", "-")}
         >
           {project.status}
-        </span>
+        </span> */}
       </div>
 
       {/* Body */}
