@@ -36,9 +36,9 @@ const Footer = () => {
             <Link to="/projects" className={styles.footerLink}>
               Projects
             </Link>
-            <Link to="/#disciplines" className={styles.footerLink}>
+            {/* <Link to="/#disciplines" className={styles.footerLink}>
               Services
-            </Link>
+            </Link> */}
             <Link to="/#about" className={styles.footerLink}>
               About Us
             </Link>

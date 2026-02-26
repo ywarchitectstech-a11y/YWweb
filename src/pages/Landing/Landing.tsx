@@ -18,6 +18,9 @@ import processImg from "@/assets/process-1.jpg";
 import sustainImg from "@/assets/sustainability.jpg";
 import LatestProject from "./LatestProjects.jsx";
 import DisciplineImg from "../../assets/DisciplineImg.png";
+
+// Proejcts
+
 function DisciplineItem({ label, img, onMouseEnter, onMouseLeave }) {
   return (
     <li

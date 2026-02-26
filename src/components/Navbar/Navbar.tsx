@@ -6,9 +6,9 @@ import logo from "../../assets/logo.png";
 const navItems = [
   { label: "Home", path: "/#projects" },
   { label: "Projects", path: "/projects" },
-  { label: "Services", path: "/#disciplines" },
+  // { label: "Services", path: "/#disciplines" },
   { label: "About Us", path: "/#about" },
-  { label: "Articles", path: "/#articles" },
+  // { label: "Articles", path: "/#articles" },
 ];
 
 const Navbar = () => {

@@ -7,100 +7,212 @@ import project2 from "../../assets/projects/Project2.jpg";
 import project3 from "../../assets/projects/Project3.jpeg";
 import project4 from "../../assets/projects/Project4.jpeg";
 import project5 from "../../assets/projects/Project5.png";
+import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.jpeg";
+import INFINI from "../../assets/projects/INFINI/Image1.jpg";
+import Citylight from "../../assets/projects/CityLight/Image1.jpg";
+import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";
+import TanishUrbania from "../../assets/projects/TanishUrbania/Image1.jpg";
+import AlandiSchool from "../../assets/projects/AlandiSchool/Image1.jpg";
+import PrarambhSerenity from "../../assets/projects/PrarambhSerenity/Image1.jpg";
+import ShubAnugrah from "../../assets/projects/ShubAnugrah/Image1.jpeg";
+import TanishIndrayani from "../../assets/projects/TanishIndrayani/Image1.jpg";
+import Pioneer from "../../assets/projects/Pioneer/Image1.png";
+import BhosaleGalaxy from "../../assets/projects/BhosaleGalaxy/Image1.png";
+import BhosaleIcon from "../../assets/projects/BhosaleIcon/Image1.png";
+import BeState from "../../assets/projects/BeState/Image1.jpg";
+import Mantra360 from "../../assets/projects/Mantra360/Image1.jpg";
+
+// const BASE_PROJECTS = [
+//   {
+//     id: 0,
+//     title: "ADHYA RATAN",
+//     subtitle: "A new model for vacation homes",
+//     img: project1,
+//   },
+//   {
+//     id: 1,
+//     title: "TANISH URBANIA",
+//     subtitle: "Architecture dissolving into nature",
+//     img: project2,
+//   },
+//   {
+//     id: 2,
+//     title: "PIONEER LUMINA",
+//     subtitle: "Where heritage meets the horizon",
+//     img: project3,
+//   },
+//   {
+//     id: 3,
+//     title: "SHUBH ANUGRAHA",
+//     subtitle: "Woven light across the city grid",
+//     img: project4,
+//   },
+//   {
+//     id: 4,
+//     title: "TANISH INDRAYANI",
+//     subtitle: "A lens turned toward the sea",
+//     img: project5,
+//   },
+//   {
+//     id: 0,
+//     title: "ADHYA RATAN",
+//     subtitle: "A new model for vacation homes",
+//     img: project1,
+//   },
+//   {
+//     id: 1,
+//     title: "TANISH URBANIA",
+//     subtitle: "Architecture dissolving into nature",
+//     img: project2,
+//   },
+//   {
+//     id: 2,
+//     title: "PIONEER LUMINA",
+//     subtitle: "Where heritage meets the horizon",
+//     img: project3,
+//   },
+//   {
+//     id: 3,
+//     title: "SHUBH ANUGRAHA",
+//     subtitle: "Woven light across the city grid",
+//     img: project4,
+//   },
+//   {
+//     id: 4,
+//     title: "TANISH INDRAYANI",
+//     subtitle: "A lens turned toward the sea",
+//     img: project5,
+//   },
+//   {
+//     id: 0,
+//     title: "ADHYA RATAN",
+//     subtitle: "A new model for vacation homes",
+//     img: project1,
+//   },
+//   {
+//     id: 1,
+//     title: "TANISH URBANIA",
+//     subtitle: "Architecture dissolving into nature",
+//     img: project2,
+//   },
+//   {
+//     id: 2,
+//     title: "PIONEER LUMINA",
+//     subtitle: "Where heritage meets the horizon",
+//     img: project3,
+//   },
+//   {
+//     id: 3,
+//     title: "SHUBH ANUGRAHA",
+//     subtitle: "Woven light across the city grid",
+//     img: project4,
+//   },
+//   {
+//     id: 4,
+//     title: "TANISH INDRAYANI",
+//     subtitle: "A lens turned toward the sea",
+//     img: project5,
+//   },
+// ];
 
 const BASE_PROJECTS = [
   {
-    id: 0,
+    id: 1,
     title: "ADHYA RATAN",
     subtitle: "A new model for vacation homes",
-    img: project1,
-  },
-  {
-    id: 1,
-    title: "TANISH URBANIA",
-    subtitle: "Architecture dissolving into nature",
-    img: project2,
+    img: AdhyaRatan,
   },
   {
     id: 2,
-    title: "PIONEER LUMINA",
-    subtitle: "Where heritage meets the horizon",
-    img: project3,
+    title: "INFINI JAGTAP CITY",
+    subtitle: "",
+    img: INFINI,
   },
   {
     id: 3,
-    title: "SHUBH ANUGRAHA",
-    subtitle: "Woven light across the city grid",
-    img: project4,
+    title: "PLATINUM CITYLIGHTS",
+    subtitle: "",
+    img: Citylight,
   },
   {
     id: 4,
-    title: "TANISH INDRAYANI",
-    subtitle: "A lens turned toward the sea",
-    img: project5,
+    title: "ADHYA RADHA KRISHNA",
+    subtitle: "",
+    img: AdhyaRadha,
   },
   {
-    id: 0,
-    title: "ADHYA RATAN",
-    subtitle: "A new model for vacation homes",
-    img: project1,
-  },
-  {
-    id: 1,
+    id: 5,
     title: "TANISH URBANIA",
-    subtitle: "Architecture dissolving into nature",
-    img: project2,
+    subtitle: "",
+    img: TanishUrbania,
   },
   {
-    id: 2,
-    title: "PIONEER LUMINA",
-    subtitle: "Where heritage meets the horizon",
-    img: project3,
+    id: 6,
+    title: "ALANDI SCHOOL",
+    subtitle: "",
+    img: AlandiSchool,
   },
   {
-    id: 3,
-    title: "SHUBH ANUGRAHA",
-    subtitle: "Woven light across the city grid",
-    img: project4,
+    id: 7,
+    title: "PRARAMBH SERENITY",
+    subtitle: "",
+    img: PrarambhSerenity,
   },
   {
-    id: 4,
+    id: 8,
+    title: "SHUBH ANUGRAH",
+    subtitle: "",
+    img: ShubAnugrah,
+  },
+  // {
+  //   id: 9,
+  //   title: "VISION",
+  //   subtitle: "",
+  //   img: null, // ⚠️ No import yet
+  // },
+  {
+    id: 10,
     title: "TANISH INDRAYANI",
-    subtitle: "A lens turned toward the sea",
-    img: project5,
+    subtitle: "",
+    img: TanishIndrayani,
   },
   {
-    id: 0,
-    title: "ADHYA RATAN",
-    subtitle: "A new model for vacation homes",
-    img: project1,
+    id: 11,
+    title: "PIONEER",
+    subtitle: "",
+    img: Pioneer,
+  },
+  // {
+  //   id: 12,
+  //   title: "KALP 99",
+  //   subtitle: "",
+  //   img: null, // ⚠️ No import yet
+  // },
+  {
+    id: 13,
+    title: "BHOSALE GALAXY",
+    subtitle: "",
+    img: BhosaleGalaxy,
   },
   {
-    id: 1,
-    title: "TANISH URBANIA",
-    subtitle: "Architecture dissolving into nature",
-    img: project2,
+    id: 14,
+    title: "BHOSALE ICON",
+    subtitle: "",
+    img: BhosaleIcon,
   },
   {
-    id: 2,
-    title: "PIONEER LUMINA",
-    subtitle: "Where heritage meets the horizon",
-    img: project3,
+    id: 15,
+    title: "BESTATE AXIS",
+    subtitle: "",
+    img: BeState,
   },
   {
-    id: 3,
-    title: "SHUBH ANUGRAHA",
-    subtitle: "Woven light across the city grid",
-    img: project4,
-  },
-  {
-    id: 4,
-    title: "TANISH INDRAYANI",
-    subtitle: "A lens turned toward the sea",
-    img: project5,
+    id: 16,
+    title: "MANTRA 360",
+    subtitle: "",
+    img: Mantra360,
   },
 ];
-
 const N = BASE_PROJECTS.length;
 const PROJECTS = [...BASE_PROJECTS, ...BASE_PROJECTS, ...BASE_PROJECTS];
 const TOTAL = PROJECTS.length; // 15
@@ -342,6 +454,7 @@ export default function ProjectsCarousel() {
   // ─────────────────────────────────────────────────────────────────────────────
   return (
     <section className={styles.section}>
+      <h2>Highlighted Projects </h2>
       <div
         ref={wrapperRef}
         className={styles.stage}

@@ -18,6 +18,14 @@
     max-width: 100vw;
     overflow: hidden;
   }
+  h2 {
+    font-size: 32px;
+    margin: 50px;
+    margin-bottom: 10px;
+    @include responsive($mobile) {
+      font-size: 24px;
+    }
+  }
 }
 
 // ── The stage: relative container that holds all absolute cards ───────────────
@@ -105,7 +113,7 @@
 }
 
 .captionTitle {
-  font-family: "Georgia", "Times New Roman", serif;
+  // font-family: "Georgia", "Times New Roman", serif;
   font-size: 15px;
   font-weight: 400;
   color: #fff;

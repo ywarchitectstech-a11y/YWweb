@@ -97,6 +97,12 @@
   @include container;
   @include section-padding;
   max-width: 1100px;
+  @include responsive($tablet) {
+    padding: 20px;
+  }
+  @include responsive($mobile) {
+    margin: 30px;
+  }
 }
 
 .infoGrid {

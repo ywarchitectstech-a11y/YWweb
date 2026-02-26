@@ -7,14 +7,160 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 import styles from "./ProjectsPage.module.scss";
-import project1 from "../../assets/projects/Project1.jpeg";
+
+import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.jpeg";
+import INFINI from "../../assets/projects/INFINI/Image1.jpg";
+import Citylight from "../../assets/projects/CityLight/Image1.jpg";
+import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";
+import TanishUrbania from "../../assets/projects/TanishUrbania/Image1.jpg";
+import AlandiSchool from "../../assets/projects/AlandiSchool/Image1.jpg";
+import PrarambhSerenity from "../../assets/projects/PrarambhSerenity/Image1.jpg";
+import ShubAnugrah from "../../assets/projects/ShubAnugrah/Image1.jpeg";
+import TanishIndrayani from "../../assets/projects/TanishIndrayani/Image1.jpg";
+import Pioneer from "../../assets/projects/Pioneer/Image1.png";
+import BhosaleGalaxy from "../../assets/projects/BhosaleGalaxy/Image1.png";
+import BhosaleIcon from "../../assets/projects/BhosaleIcon/Image1.png";
+import BeState from "../../assets/projects/BeState/Image1.jpg";
+import Mantra360 from "../../assets/projects/Mantra360/Image1.jpg";
+
 import project2 from "../../assets/projects/Project2.jpg";
-import project3 from "../../assets/projects/Project3.jpeg";
+import Vision from "../../assets/projects/Vision/Image1.jpg";
 import project4 from "../../assets/projects/Project4.jpeg";
 import project5 from "../../assets/projects/Project5.png";
 // ─────────────────────────────────────────────────────────────
 //  DATA
 // ─────────────────────────────────────────────────────────────
+
+// const PROJECTS = [
+//   {
+//     id: 1,
+//     title: "ADHYA RATAN",
+//     discipline: "Mixed-Use",
+//     status: "Completed",
+//     // location: "Ahmedabad",
+//     year: "2023",
+//     area: "12,500 sqm",
+//     floors: "14",
+//     shortDesc:
+//       "A mixed-use residential complex that blends retail and residential spaces with warm brick tones and landscaped podiums.",
+//     longDesc:
+//       "Adhya Radha-Krishna is a landmark mixed-use development that redefines urban living in Ahmedabad. Rising 14 floors, the building integrates premium retail on lower levels with carefully crafted residential units above. The warm brick-tone façade creates visual warmth while the strategic placement of greenery and open spaces ensures residents enjoy a connection to nature amid the urban environment. The project incorporates energy-efficient systems, rainwater harvesting, and sustainable materials throughout its construction, achieving a benchmark in responsible urban development.",
+//     tags: ["Mixed-Use", "Residential", "Retail", "Sustainable"],
+//     image: project1,
+//     gallery: [
+//       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+//     ],
+//   },
+//   {
+//     id: 2,
+//     title: "TANISH URBANIA",
+//     discipline: "Commercial",
+//     status: "Ongoing",
+//     // location: "Surat",
+//     year: "2024",
+//     area: "28,000 sqm",
+//     floors: "28",
+//     shortDesc:
+//       "A soaring commercial tower with a textured wooden-tone façade, sky lobbies, and panoramic city views.",
+//     longDesc:
+//       "Skyline Tower Block Views represents a new generation of commercial architecture in Surat. The 28-story tower features a meticulously designed textured facade that plays with light and shadow throughout the day. The interior planning maximizes natural light penetration through a central atrium, while flexible floor plates accommodate diverse corporate tenants. The tower includes sky lobbies on alternate floors, rooftop gardens, and premium conference facilities, establishing a new standard for Grade-A office space in the region.",
+//     tags: ["Commercial", "High-rise", "Office", "Corporate"],
+//     image: project2,
+//     gallery: [
+//       "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80",
+//     ],
+//   },
+//   {
+//     id: 3,
+//     title: "PIONEER LUMINA",
+//     discipline: "Residential",
+//     status: "Completed",
+//     // location: "Pune",
+//     year: "2022",
+//     area: "18,200 sqm",
+//     floors: "18",
+//     shortDesc:
+//       "Premium high-rise residential towers featuring vertical gardens integrated into a bold, linear façade.",
+//     longDesc:
+//       "Verdant Heights challenges conventional residential design by bringing nature into the built environment. The 18-floor towers feature integrated vertical gardens on every alternate floor, creating a cascade of greenery visible from kilometers away. Each unit enjoys a private garden terrace, while shared amenities include rooftop infinity pools, meditation gardens, and urban farming plots. The project has achieved LEED Platinum certification for its sustainable design principles and commitment to reducing the urban heat island effect.",
+//     tags: ["Residential", "Luxury", "Green Architecture", "LEED Platinum"],
+//     image: project3,
+//     gallery: [
+//       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
+//     ],
+//   },
+//   {
+//     id: 4,
+//     title: "SHUBH ANUGRAHA",
+//     discipline: "Residential",
+//     status: "Ongoing",
+//     // location: "Vadodara",
+//     year: "2025",
+//     area: "35,000 sqm",
+//     floors: "10",
+//     shortDesc:
+//       "A large-scale affordable housing project that proves quality design and economic viability can coexist.",
+//     longDesc:
+//       "Horizon Affordable Housing demonstrates that quality design need not be a luxury. Spread across a 35,000 sqm site, the project provides 480 homes for economically weaker sections without compromising on livability or dignity. The design prioritises cross-ventilation, natural light, and community spaces. Shared amenities include playgrounds, community halls, and green corridors between blocks. The modular construction approach reduced costs by 30% while maintaining high build quality and aesthetic coherence.",
+//     tags: ["Affordable Housing", "Community", "Social Impact", "Modular"],
+//     image: project4,
+//     gallery: [
+//       "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
+//     ],
+//     link: "projects/adhyaratan",
+//   },
+//   {
+//     id: 5,
+//     title: "TANISH INDRAYANI",
+//     discipline: "Cultural",
+//     status: "Concept",
+//     location: "Mumbai",
+//     year: "2026",
+//     area: "8,400 sqm",
+//     floors: "3",
+//     shortDesc:
+//       "A multi-purpose cultural pavilion with a perforated brick skin that filters light into ever-changing interior atmospheres.",
+//     longDesc:
+//       "The Cultural Pavilion is a visionary concept for Mumbai's waterfront, designed to serve as a democratic space for culture, learning, and community gathering. The three-level structure houses exhibition galleries, performance spaces, and a public library. Its distinctive perforated brick facade creates a dramatic play of light and shadow inside, with patterns derived from traditional Indian jaali work. The building opens up to the waterfront with generous terraces and is designed to be fully accessible and welcoming to every member of the public.",
+//     tags: ["Cultural", "Public Space", "Exhibition", "Performance"],
+//     image: project5,
+//     gallery: [
+//       "https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
+//     ],
+//   },
+//   {
+//     id: 6,
+//     title: "UpComing",
+//     discipline: "Mixed-Use",
+//     status: "Ongoing",
+//     location: "Bangalore",
+//     year: "2024",
+//     area: "52,000 sqm",
+//     floors: "22",
+//     shortDesc:
+//       "A bold mixed-use tower combining co-working, retail, F&B, and serviced apartments in a cohesive vertical community.",
+//     longDesc:
+//       "Urban Nexus is conceived as a vertical city within a city. The 22-floor mixed-use tower creates a new benchmark for integrated urban development in Bangalore. The lower eight floors house premium retail and F&B, mid-section floors feature flexible co-working spaces, and the upper floors offer serviced apartments with hotel-grade amenities. The project is directly connected to the metro network and features an underground parking facility, freeing the ground plane for pedestrian-friendly plazas and public gardens.",
+//     tags: ["Mixed-Use", "Co-working", "Retail", "Transit-Oriented"],
+//     image:
+//       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80",
+//     gallery: [
+//       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1400&q=80",
+//       "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
+//     ],
+//   },
+// ];
 
 const PROJECTS = [
   {
@@ -22,131 +168,226 @@ const PROJECTS = [
     title: "ADHYA RATAN",
     discipline: "Mixed-Use",
     status: "Completed",
-    // location: "Ahmedabad",
     year: "2023",
     area: "12,500 sqm",
     floors: "14",
-    shortDesc:
-      "A mixed-use residential complex that blends retail and residential spaces with warm brick tones and landscaped podiums.",
-    longDesc:
-      "Adhya Radha-Krishna is a landmark mixed-use development that redefines urban living in Ahmedabad. Rising 14 floors, the building integrates premium retail on lower levels with carefully crafted residential units above. The warm brick-tone façade creates visual warmth while the strategic placement of greenery and open spaces ensures residents enjoy a connection to nature amid the urban environment. The project incorporates energy-efficient systems, rainwater harvesting, and sustainable materials throughout its construction, achieving a benchmark in responsible urban development.",
-    tags: ["Mixed-Use", "Residential", "Retail", "Sustainable"],
-    image: project1,
-    gallery: [
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
-    ],
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Mixed-Use"],
+    image: AdhyaRatan,
+    gallery: [],
   },
   {
     id: 2,
-    title: "TANISH URBANIA",
-    discipline: "Commercial",
+    title: "INFINI JAGTAP CITY",
+    discipline: "Mixed-Use",
     status: "Ongoing",
-    // location: "Surat",
     year: "2024",
-    area: "28,000 sqm",
-    floors: "28",
-    shortDesc:
-      "A soaring commercial tower with a textured wooden-tone façade, sky lobbies, and panoramic city views.",
-    longDesc:
-      "Skyline Tower Block Views represents a new generation of commercial architecture in Surat. The 28-story tower features a meticulously designed textured facade that plays with light and shadow throughout the day. The interior planning maximizes natural light penetration through a central atrium, while flexible floor plates accommodate diverse corporate tenants. The tower includes sky lobbies on alternate floors, rooftop gardens, and premium conference facilities, establishing a new standard for Grade-A office space in the region.",
-    tags: ["Commercial", "High-rise", "Office", "Corporate"],
-    image: project2,
-    gallery: [
-      "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1400&q=80",
-    ],
+    area: "40,000 sqm",
+    floors: "20",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Mixed-Use"],
+    image: INFINI,
+    gallery: [],
   },
   {
     id: 3,
-    title: "PIONEER LUMINA",
+    title: "PLATINUM CITYLIGHTS",
     discipline: "Residential",
     status: "Completed",
-    // location: "Pune",
     year: "2022",
-    area: "18,200 sqm",
+    area: "22,000 sqm",
     floors: "18",
-    shortDesc:
-      "Premium high-rise residential towers featuring vertical gardens integrated into a bold, linear façade.",
-    longDesc:
-      "Verdant Heights challenges conventional residential design by bringing nature into the built environment. The 18-floor towers feature integrated vertical gardens on every alternate floor, creating a cascade of greenery visible from kilometers away. Each unit enjoys a private garden terrace, while shared amenities include rooftop infinity pools, meditation gardens, and urban farming plots. The project has achieved LEED Platinum certification for its sustainable design principles and commitment to reducing the urban heat island effect.",
-    tags: ["Residential", "Luxury", "Green Architecture", "LEED Platinum"],
-    image: project3,
-    gallery: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
-    ],
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: Citylight,
+    gallery: [],
   },
   {
     id: 4,
-    title: "SHUBH ANUGRAHA",
+    title: "ADHYA RADHA KRISHNA",
     discipline: "Residential",
-    status: "Ongoing",
-    // location: "Vadodara",
-    year: "2025",
-    area: "35,000 sqm",
-    floors: "10",
-    shortDesc:
-      "A large-scale affordable housing project that proves quality design and economic viability can coexist.",
-    longDesc:
-      "Horizon Affordable Housing demonstrates that quality design need not be a luxury. Spread across a 35,000 sqm site, the project provides 480 homes for economically weaker sections without compromising on livability or dignity. The design prioritises cross-ventilation, natural light, and community spaces. Shared amenities include playgrounds, community halls, and green corridors between blocks. The modular construction approach reduced costs by 30% while maintaining high build quality and aesthetic coherence.",
-    tags: ["Affordable Housing", "Community", "Social Impact", "Modular"],
-    image: project4,
-    gallery: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1400&q=80",
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
-    ],
-    link: "projects/adhyaratan",
+    status: "Completed",
+    year: "2023",
+    area: "15,000 sqm",
+    floors: "12",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: AdhyaRadha,
+    gallery: [],
   },
   {
     id: 5,
-    title: "TANISH INDRAYANI",
-    discipline: "Cultural",
-    status: "Concept",
-    location: "Mumbai",
-    year: "2026",
-    area: "8,400 sqm",
-    floors: "3",
-    shortDesc:
-      "A multi-purpose cultural pavilion with a perforated brick skin that filters light into ever-changing interior atmospheres.",
-    longDesc:
-      "The Cultural Pavilion is a visionary concept for Mumbai's waterfront, designed to serve as a democratic space for culture, learning, and community gathering. The three-level structure houses exhibition galleries, performance spaces, and a public library. Its distinctive perforated brick facade creates a dramatic play of light and shadow inside, with patterns derived from traditional Indian jaali work. The building opens up to the waterfront with generous terraces and is designed to be fully accessible and welcoming to every member of the public.",
-    tags: ["Cultural", "Public Space", "Exhibition", "Performance"],
-    image: project5,
-    gallery: [
-      "https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80",
-    ],
+    title: "TANISH URBANIA",
+    discipline: "Commercial",
+    status: "Ongoing",
+    year: "2024",
+    area: "28,000 sqm",
+    floors: "28",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Commercial"],
+    image: TanishUrbania,
+    gallery: [],
   },
   {
     id: 6,
-    title: "UpComing",
+    title: "ALANDI SCHOOL",
+    discipline: "Institutional",
+    status: "Completed",
+    year: "2021",
+    area: "10,000 sqm",
+    floors: "4",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Institutional"],
+    image: AlandiSchool,
+    gallery: [],
+  },
+  {
+    id: 7,
+    title: "PRARAMBH SERENITY",
+    discipline: "Residential",
+    status: "Ongoing",
+    year: "2025",
+    area: "30,000 sqm",
+    floors: "16",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: PrarambhSerenity,
+    gallery: [],
+  },
+  {
+    id: 8,
+    title: "SHUBH ANUGRAH",
+    discipline: "Residential",
+    status: "Completed",
+    year: "2023",
+    area: "20,000 sqm",
+    floors: "10",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: ShubAnugrah,
+    gallery: [],
+  },
+  {
+    id: 9,
+    title: "VISION",
+    discipline: "Commercial",
+    status: "Concept",
+    year: "2026",
+    area: "12,000 sqm",
+    floors: "8",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Commercial"],
+    image: Vision,
+    gallery: [],
+  },
+  {
+    id: 10,
+    title: "TANISH INDRAYANI",
+    discipline: "Residential",
+    status: "Ongoing",
+    year: "2024",
+    area: "18,000 sqm",
+    floors: "14",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: TanishIndrayani,
+    gallery: [],
+  },
+  {
+    id: 11,
+    title: "PIONEER",
+    discipline: "Commercial",
+    status: "Completed",
+    year: "2022",
+    area: "25,000 sqm",
+    floors: "15",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Commercial"],
+    image: Pioneer,
+    gallery: [],
+  },
+  {
+    id: 12,
+    title: "KALP 99",
+    discipline: "Residential",
+    status: "Ongoing",
+    year: "2024",
+    area: "19,000 sqm",
+    floors: "12",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: project2,
+    gallery: [],
+  },
+  {
+    id: 13,
+    title: "BHOSALE GALAXY",
+    discipline: "Residential",
+    status: "Completed",
+    year: "2023",
+    area: "21,000 sqm",
+    floors: "13",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Residential"],
+    image: BhosaleGalaxy,
+    gallery: [],
+  },
+  {
+    id: 14,
+    title: "BHOSALE ICON",
+    discipline: "Commercial",
+    status: "Ongoing",
+    year: "2025",
+    area: "24,000 sqm",
+    floors: "16",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Commercial"],
+    image: BhosaleIcon,
+    gallery: [],
+  },
+  {
+    id: 15,
+    title: "BESTATE AXIS",
+    discipline: "Commercial",
+    status: "Completed",
+    year: "2023",
+    area: "26,000 sqm",
+    floors: "18",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Commercial"],
+    image: BeState,
+    gallery: [],
+  },
+  {
+    id: 16,
+    title: "MANTRA 360",
     discipline: "Mixed-Use",
     status: "Ongoing",
-    location: "Bangalore",
-    year: "2024",
-    area: "52,000 sqm",
-    floors: "22",
-    shortDesc:
-      "A bold mixed-use tower combining co-working, retail, F&B, and serviced apartments in a cohesive vertical community.",
-    longDesc:
-      "Urban Nexus is conceived as a vertical city within a city. The 22-floor mixed-use tower creates a new benchmark for integrated urban development in Bangalore. The lower eight floors house premium retail and F&B, mid-section floors feature flexible co-working spaces, and the upper floors offer serviced apartments with hotel-grade amenities. The project is directly connected to the metro network and features an underground parking facility, freeing the ground plane for pedestrian-friendly plazas and public gardens.",
-    tags: ["Mixed-Use", "Co-working", "Retail", "Transit-Oriented"],
-    image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1400&q=80",
-      "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=1400&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1400&q=80",
-    ],
+    year: "2025",
+    area: "32,000 sqm",
+    floors: "20",
+    shortDesc: "Project description",
+    longDesc: "Detailed description",
+    tags: ["Mixed-Use"],
+    image: Mantra360,
+    gallery: [],
   },
 ];
-
 const unique = (key) => ["All", ...new Set(PROJECTS.map((p) => p[key]))];
 
 const DISCIPLINES = unique("discipline");
