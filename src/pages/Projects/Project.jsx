@@ -22,6 +22,7 @@ import BhosaleGalaxy from "../../assets/projects/BhosaleGalaxy/Image1.png";
 import BhosaleIcon from "../../assets/projects/BhosaleIcon/Image1.png";
 import BeState from "../../assets/projects/BeState/Image1.jpg";
 import Mantra360 from "../../assets/projects/Mantra360/Image1.jpg";
+import Kalp from "../../assets/projects/kalp/Image1.jpg";
 
 import project2 from "../../assets/projects/Project2.jpg";
 import Vision from "../../assets/projects/Vision/Image1.jpg";
@@ -328,7 +329,7 @@ const PROJECTS = [
     shortDesc: "Project description",
     longDesc: "Detailed description",
     tags: ["Residential"],
-    image: project2,
+    image: Kalp,
     gallery: [],
   },
   {
