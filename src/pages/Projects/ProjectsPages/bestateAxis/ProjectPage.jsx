@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
 import HeroImg from "./HeroImg.webp";
 import FullImage from "./FullImage.webp";
-import LeftImg from "./Img6.webp";
-import RightImg from "./Img4.webp";
-import Img1 from "./Img1.webp";
-import Img2 from "./Img2.webp";
-import Img3 from "./Img3.webp";
-import Img4 from "./Img4.webp";
-import Img5 from "./Img5.webp";
-import Img6 from "./Img6.webp";
-import Img7 from "./Img7.webp";
+import LeftImg from "./img6.webp";
+import RightImg from "./img4.webp";
+import Img1 from "./img1.webp";
+import Img2 from "./img2.webp";
+import Img3 from "./img3.webp";
+import Img4 from "./img4.webp";
+import Img5 from "./img5.webp";
+import Img6 from "./img6.webp";
+import Img7 from "./img7.webp";
 
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 
