@@ -16,7 +16,7 @@ import AlandiSchool from "../../assets/projects/AlandiSchool/Image1.jpg";
 import PrarambhSerenity from "../../assets/projects/PrarambhSerenity/Image1.jpg";
 import ShubAnugrah from "../../assets/projects/ShubAnugrah/Image1.jpeg";
 import TanishIndrayani from "../../assets/projects/TanishIndrayani/Image1.jpg";
-import Pioneer from "../../assets/projects/Pioneer/Image1.png";
+import Pioneer from "../../assets/projects/Pioneer/Image1.jpg";
 import BhosaleGalaxy from "../../assets/projects/BhosaleGalaxy/Image1.png";
 import BhosaleIcon from "../../assets/projects/BhosaleIcon/Image1.png";
 import BeState from "../../assets/projects/BeState/Image1.jpg";
