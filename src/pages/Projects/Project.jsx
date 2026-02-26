@@ -9,7 +9,7 @@ import {
 import styles from "./ProjectsPage.module.scss";
 
 import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.jpeg";
-import INFINI from "../../assets/projects/INFINI/Image1.jpg";
+import INFINI from "../../assets/projects/INFINI/Image2.jpg";
 import Citylight from "../../assets/projects/CityLight/Image1.jpg";
 import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";
 import TanishUrbania from "../../assets/projects/TanishUrbania/Image1.jpg";
