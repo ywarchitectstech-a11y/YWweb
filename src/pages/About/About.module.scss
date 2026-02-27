@@ -160,7 +160,43 @@
     gap: 1.25rem;
   }
 }
-
+.galleryTeamWrapteaam {
+  padding: 30px;
+  h5 {
+    font-size: 24px;
+    text-align: center;
+    color: $gold;
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+  img {
+    margin-bottom: 5px;
+  }
+  @include responsive($tablet) {
+    display: none;
+  }
+}
+.galleryTeamWrapteaam2 {
+  display: none;
+  padding: 30px;
+  h5 {
+    font-size: 24px;
+    text-align: center;
+    color: $gold;
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+  img {
+    margin-bottom: 5px;
+  }
+  @include responsive($tablet) {
+    display: block;
+  }
+}
 .sectionLabel {
   font-family: $font-body;
   font-size: 20px;
@@ -174,6 +210,12 @@
   @media (max-width: $tablet) {
     padding-top: 0;
   }
+}
+.leftSide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .introBody {
@@ -189,7 +231,7 @@
 .gallerySection {
   background-color: $dark-bg;
   padding: 2rem 0 5rem;
-
+  display: none;
   @media (max-width: $tablet) {
     padding: 1rem 0 3rem;
   }
@@ -255,6 +297,9 @@
   object-fit: cover;
   object-position: top center;
   display: block;
+  max-height: 500px;
+  object-fit: cover;
+  object-position: 50%;
 }
 
 // ─── 5. ALL SCALES SECTION ────────────────────────────────────────────────────

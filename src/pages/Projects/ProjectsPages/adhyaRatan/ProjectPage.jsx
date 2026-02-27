@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./Img (4).webp";
-import FullImage from "./Img (3).webp";
+import HeroImg from "./Img (1).webp";
+import FullImage from "./Img (3).jpeg";
 import LeftImg from "./Img (1).webp";
 import RightImg from "./Img (2).webp";
 import img1 from "./Img (1).webp";
 import img2 from "./Img (2).webp";
-import img3 from "./Img (3).webp";
-import img4 from "./Img (4).webp";
-import img5 from "./Img (5).jpeg";
+import img3 from "./Img (3).jpeg";
+// import img4 from "./Img (4).webp";
+// import img5 from "./Img (5).jpeg";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 const images = [
   { id: 1, src: img1 },
   { id: 2, src: img2 },
   { id: 3, src: img3 },
-  { id: 4, src: img4 },
-  { id: 5, src: img5 },
+  // { id: 4, src: img4 },
+  // { id: 5, src: img5 },
 ];
 
 export default function AdhyaratanProjectPage() {

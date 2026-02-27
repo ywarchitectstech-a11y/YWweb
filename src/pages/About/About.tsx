@@ -50,25 +50,50 @@ export default function AboutUs() {
       {/* ── 3. THE YW STORY IN SHORT ───────────────────────────────── */}
       <section className={styles.introSection}>
         <div className={styles.introGrid}>
-          <span className={styles.sectionLabel}>The YW story in short</span>
-          <p className={styles.introBody}>
-            Founded in 2010, YW Architects is a multidisciplinary architecture
-            practice delivering intelligent design solutions across diverse
-            scales and typologies. Our work spans public and private
-            developments, adaptive reuse, landscape design, interiors, and
-            infrastructure. The practice is led by <b>Yogesh Wakchaure</b>,
-            Founder and Principal Architect, whose vision and strategic
-            leadership shape the firm’s design philosophy and execution
-            standards. With extensive experience in architectural planning and
-            project coordination, he ensures every project reflects clarity,
-            technical precision, and long-term value.
-            <br />
-            <br /> We operate through a collaborative, systems-led approach,
-            integrating clients, developers, and specialist teams into a single,
-            informed process. By strategically guiding each project from concept
-            to execution, we ensure outcomes that are economically viable,
-            technically sound, and built for long-term performance.
-          </p>
+          <div className={styles.leftSide}>
+            {" "}
+            <span className={styles.sectionLabel}>The YW story in short</span>
+            <div className={styles.galleryTeamWrapteaam}>
+              <img
+                src={TEAM_IMG}
+                alt="YW Architects team"
+                className={styles.galleryTeamImg}
+              />
+              <h5>Yogesh Wakchaure</h5>
+              <p> Founder</p>
+            </div>
+          </div>
+
+          <div>
+            <p className={styles.introBody}>
+              Founded in 2010, YW Architects is a multidisciplinary architecture
+              practice delivering intelligent design solutions across diverse
+              scales and typologies. Our work spans public and private
+              developments, adaptive reuse, landscape design, interiors, and
+              infrastructure. The practice is led by <b>Yogesh Wakchaure</b>,
+              Founder and Principal Architect, whose vision and strategic
+              leadership shape the firm’s design philosophy and execution
+              standards. With extensive experience in architectural planning and
+              project coordination, he ensures every project reflects clarity,
+              technical precision, and long-term value.
+              <br />
+              <br /> We operate through a collaborative, systems-led approach,
+              integrating clients, developers, and specialist teams into a
+              single, informed process. By strategically guiding each project
+              from concept to execution, we ensure outcomes that are
+              economically viable, technically sound, and built for long-term
+              performance.
+            </p>
+          </div>
+        </div>
+        <div className={styles.galleryTeamWrapteaam2}>
+          <img
+            src={TEAM_IMG}
+            alt="YW Architects team"
+            className={styles.galleryTeamImg}
+          />
+          <h5>Yogesh Wakchaure</h5>
+          <p> Founder</p>
         </div>
       </section>
 
@@ -80,13 +105,6 @@ export default function AboutUs() {
               src={BUILDING1_IMG}
               alt="YW Architects residential building exterior"
               className={styles.galleryBuildingImg}
-            />
-          </div>
-          <div className={styles.galleryTeamWrap}>
-            <img
-              src={TEAM_IMG}
-              alt="YW Architects team"
-              className={styles.galleryTeamImg}
             />
           </div>
         </div>
