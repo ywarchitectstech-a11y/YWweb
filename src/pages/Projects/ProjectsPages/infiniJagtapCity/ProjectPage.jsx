@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./Img (4).webp";
-import FullImage from "./Img (3).webp";
-import LeftImg from "./Img (8).webp";
+import HeroImg from "./Img (3).webp";
+import FullImage from "./Img (11).webp";
+import LeftImg from "./Img (24).webp";
 import RightImg from "./Img (5).webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 import img1 from "./Img (1).webp";
