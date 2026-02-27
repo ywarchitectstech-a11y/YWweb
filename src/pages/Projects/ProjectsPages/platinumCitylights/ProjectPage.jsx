@@ -129,8 +129,8 @@ export default function AdhyaratanProjectPage() {
             </strong>
             .
           </p>
-          <div className={styles.stats}>
-            {/* Row 1 */}
+          {/* <div className={styles.stats}>
+            
             <div className={styles.row}>
               <div className={styles.col}>
                 <p>Status</p>
@@ -156,7 +156,7 @@ export default function AdhyaratanProjectPage() {
               </div>
             </div>
 
-            {/* Row 2 */}
+         
             <div className={`${styles.row} ${styles.three}`}>
               <div className={styles.col}>
                 <p>Size</p>
@@ -183,7 +183,7 @@ export default function AdhyaratanProjectPage() {
                 </h4>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className={styles.ImagesSection}>

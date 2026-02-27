@@ -90,7 +90,6 @@ export default function AdhyaratanProjectPage() {
             .
           </p>
           <div className={styles.stats}>
-            {/* Row 1 */}
             <div className={styles.row}>
               <div className={styles.col}>
                 <p>Status</p>
@@ -116,7 +115,6 @@ export default function AdhyaratanProjectPage() {
               </div>
             </div>
 
-            {/* Row 2 */}
             <div className={`${styles.row} ${styles.three}`}>
               <div className={styles.col}>
                 <p>Size</p>
