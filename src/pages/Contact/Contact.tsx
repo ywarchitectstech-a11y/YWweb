@@ -41,7 +41,7 @@ const Contact = () => {
           <AnimatedSection>
             <div className={styles.formWrapper}>
               <form className={styles.form} onSubmit={handleSubmit}>
-              <h2>Schedule Now</h2>
+                <h2>Schedule Now</h2>
                 <div className={styles.inputGroup}>
                   <input
                     type="text"
@@ -121,7 +121,7 @@ const Contact = () => {
                 <a href="tel:+919623901901">+91 9623901901</a>
               </div>
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
+            {/* <AnimatedSection delay={0.2}>
               <div className={styles.infoCard}>
                 <h3>CONNECT WITH US</h3>
                 <p>
@@ -130,7 +130,7 @@ const Contact = () => {
                   Orchard, Paris, France
                 </p>
               </div>
-            </AnimatedSection>
+            </AnimatedSection> */}
           </div>
         </section>
       </main>
