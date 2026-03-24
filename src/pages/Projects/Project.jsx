@@ -12,7 +12,7 @@ import AdhyaRatan from "../../assets/projects/AdhyaRatan/Image1.webp";
 import INFINI from "../../assets/projects/INFINI/Image2.jpg";
 import Citylight from "../../assets/projects/CityLight/Image1.jpg";
 import AdhyaRadha from "../../assets/projects/AdhyaRadha/Image1.jpg";
-import TanishUrbania from "../../assets/projects/TanishUrbania/Image1.jpg";
+import TanishUrbania from "./TanishU.webp";
 import AlandiSchool from "../../assets/projects/AlandiSchool/Image1.jpg";
 import PrarambhSerenity from "../../assets/projects/PrarambhSerenity/Image1.jpg";
 import ShubAnugrah from "../../assets/projects/ShubAnugrah/Image1.jpeg";
