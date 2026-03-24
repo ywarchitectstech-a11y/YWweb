@@ -88,7 +88,7 @@ const Landing = () => {
     { label: "Master Planning", img: project11 },
     { label: "Landscape Architecture", img: project2 },
     { label: "Interior Design", img: project22 },
-    { label: "Landscape Design", img: project4 },
+    // { label: "Landscape Design", img: project4 },
     { label: "Infrastructure", img: DisciplineImg },
   ];
   // reviewas
