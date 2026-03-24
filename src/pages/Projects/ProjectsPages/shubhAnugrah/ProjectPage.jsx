@@ -1,21 +1,57 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./Img (2).webp";
-import FullImage from "./Img (2).webp";
-import LeftImg from "./Img (3).webp";
-import RightImg from "./Img (1).webp";
+import HeroImg from "./Img2.webp";
+import FullImage from "./Img10.webp";
+import LeftImg from "./Img11.webp";
+import RightImg from "./Img12.webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
-import img1 from "./Img (1).webp";
-import img2 from "./Img (2).webp";
-import img3 from "./Img (3).webp";
-import img4 from "./Img (4).webp";
-
+// import img1 from "./Img (1).webp";
+// import img2 from "./Img (2).webp";
+// import img3 from "./Img (3).webp";
+// import img4 from "./Img (4).webp";
+import Img1 from "./Img1.webp";
+import Img2 from "./Img2.webp";
+import Img3 from "./Img3.webp";
+import Img4 from "./Img4.webp";
+import Img5 from "./Img5.webp";
+import Img6 from "./Img6.webp";
+import Img7 from "./Img7.webp";
+import Img8 from "./Img8.webp";
+import Img9 from "./Img9.webp";
+import Img10 from "./Img10.webp";
+import Img11 from "./Img11.webp";
+import Img12 from "./Img12.webp";
+import Img13 from "./Img13.webp";
 const images = [
-  { id: 1, src: img1 },
-  { id: 2, src: img2 },
-  { id: 3, src: img3 },
-  { id: 4, src: img4 },
+  {
+    id: 1,
+    src: Img1,
+    title: "Residential Tower Aerial",
+    orientation: "landscape",
+  },
+  { id: 2, src: Img2, title: "Front Elevation", orientation: "portrait" },
+  { id: 3, src: Img3, title: "Corner View", orientation: "landscape" },
+  { id: 4, src: Img4, title: "Top View Planning", orientation: "landscape" },
+  { id: 5, src: Img5, title: "Facade Design", orientation: "portrait" },
+  { id: 6, src: Img6, title: "Evening Elevation", orientation: "portrait" },
+  { id: 7, src: Img7, title: "Side Perspective", orientation: "landscape" },
+  { id: 8, src: Img8, title: "Night Lighting View", orientation: "landscape" },
+  { id: 9, src: Img9, title: "Main Entrance View", orientation: "portrait" },
+  {
+    id: 10,
+    src: Img10,
+    title: "Landscape Integration",
+    orientation: "landscape",
+  },
+  { id: 11, src: Img11, title: "Balcony Detail", orientation: "portrait" },
+  {
+    id: 12,
+    src: Img12,
+    title: "Street View Perspective",
+    orientation: "landscape",
+  },
+  { id: 13, src: Img13, title: "Final Render Shot", orientation: "portrait" },
 ];
 export default function AdhyaratanProjectPage() {
   const [open, setOpen] = useState(false);

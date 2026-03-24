@@ -85,7 +85,7 @@ const Footer = () => {
 
               <div className={styles.links}>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/yw_architects"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.icon}

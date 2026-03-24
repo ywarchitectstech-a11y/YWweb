@@ -1,29 +1,75 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./HeroImg.jpg";
-import FullImage from "./FullImage.jpg";
-import LeftImg from "./HeroImg.jpg";
-import RightImg from "./HeroImg.jpg";
+import HeroImg from "./Img8.webp";
+import FullImage from "./Img9.webp";
+import LeftImg from "./Img5.webp";
+import RightImg from "./Img1.webp";
+import Img1 from "./Img1.webp";
+import Img2 from "./Img2.webp";
+import Img3 from "./Img3.webp";
+import Img4 from "./Img4.webp";
+import Img5 from "./Img5.webp";
+import Img6 from "./Img6.webp";
+import Img7 from "./Img7.webp";
+import Img8 from "./Img8.webp";
+import Img9 from "./Img9.webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
-
 const images = [
   {
     id: 1,
-    src: RightImg,
-    title: "Residential Tower",
+    src: Img1,
+    title: "Residential Tower Aerial",
     orientation: "landscape",
   },
-  { id: 2, src: HeroImg, title: "Commercial Complex", orientation: "portrait" },
+  {
+    id: 2,
+    src: Img2,
+    title: "Front Elevation",
+    orientation: "portrait",
+  },
   {
     id: 3,
-    src: HeroImg,
-    title: "Mixed Use Development",
+    src: Img3,
+    title: "Corner View",
     orientation: "landscape",
   },
-  { id: 4, src: RightImg, title: "Modern Facade", orientation: "portrait" },
-  { id: 5, src: HeroImg, title: "Shopping Mall", orientation: "landscape" },
-  { id: 6, src: RightImg, title: "Interior Lobby", orientation: "portrait" },
+  {
+    id: 4,
+    src: Img4,
+    title: "Top View Planning",
+    orientation: "landscape",
+  },
+  {
+    id: 5,
+    src: Img5,
+    title: "Facade Design",
+    orientation: "portrait",
+  },
+  {
+    id: 6,
+    src: Img6,
+    title: "Evening Elevation",
+    orientation: "portrait",
+  },
+  {
+    id: 7,
+    src: Img7,
+    title: "Side Perspective",
+    orientation: "landscape",
+  },
+  {
+    id: 8,
+    src: Img8,
+    title: "Night Lighting View",
+    orientation: "landscape",
+  },
+  {
+    id: 9,
+    src: Img9,
+    title: "Main Entrance View",
+    orientation: "portrait",
+  },
 ];
 
 export default function AdhyaratanProjectPage() {

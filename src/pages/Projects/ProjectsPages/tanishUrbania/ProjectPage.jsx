@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import HeroImg from "./Img (4).webp";
-import FullImage from "./Img (2).webp";
-import LeftImg from "./Img (1).webp";
-import RightImg from "./Img (6).webp";
+import HeroImg from "./Img2.webp";
+import FullImage from "./Img4.webp";
+import LeftImg from "./Img3.webp";
+import RightImg from "./Img (4).webp";
 import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
 import img1 from "./Img (1).webp";
 import img2 from "./Img (2).webp";
@@ -12,8 +12,15 @@ import img3 from "./Img (3).webp";
 import img4 from "./Img (4).webp";
 import img5 from "./Img (5).webp";
 import img6 from "./Img (6).webp";
-
+import img7 from "./Img1.webp";
+import img8 from "./Img2.webp";
+import img9 from "./Img3.webp";
+import img10 from "./Img4.webp";
 const images = [
+  { id: 7, src: img7 },
+  { id: 8, src: img8 },
+  { id: 9, src: img9 },
+  { id: 10, src: img10 },
   { id: 1, src: img1 },
   { id: 2, src: img2 },
   { id: 3, src: img3 },
