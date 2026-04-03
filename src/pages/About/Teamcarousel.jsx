@@ -11,7 +11,7 @@ import Img3 from "../../assets/team/Img(3).jpeg";
 import Img4 from "../../assets/team/Img(4).jpeg";
 import Img5 from "../../assets/team/Img(5).jpeg";
 import Img6 from "../../assets/team/Img(6).jpeg";
-import Img7 from "../../assets/team/Img(7).jpeg";
+import Img7 from "../../assets/team/Img(7).png";
 import Img8 from "../../assets/team/Img(8).jpeg";
 import Img9 from "../../assets/team/Img(9).jpeg";
 import Img10 from "../../assets/team/Img(10).jpeg";
